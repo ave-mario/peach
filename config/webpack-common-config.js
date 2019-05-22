@@ -26,12 +26,4 @@ module.exports = {
       Utils: path.resolve(resolveApp('src'), 'utils'),
     },
   },
-  module: {
-    rules: [
-      {
-        test: /\.(png|svg|jpg)$/,
-        use: ['file-loader'],
-      },
-    ],
-  },
 };
