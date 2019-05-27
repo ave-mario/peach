@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import {Button} from "../../shared/buttons.css";
 import SignIn from '../sign_in';
 import SignUp from '../sign_up';
 
@@ -16,24 +17,26 @@ class Main extends Component {
   toggleSignInForm = () => {
     this.setState(prevState => ({
       isShowingSignIn: !prevState.isShowingSignIn,
+      isShowingSignUp: false
     }));
   };
 
   toggleSignUpForm = () => {
     this.setState(prevState => ({
       isShowingSignUp: !prevState.isShowingSignUp,
+      isShowingSignIn: false
     }));
   };
 
   render() {
     return (
       <div>
-        <button className="signIn-open-btn" onClick={this.toggleSignInForm}>
+        <Button onClick={this.toggleSignInForm}>
           Login
-        </button>
-        <button className="signUp-open-btn" onClick={this.toggleSignUpForm}>
+        </Button>
+        <Button onClick={this.toggleSignUpForm}>
           SignUp
-        </button>
+        </Button>
         <SignIn
           show={this.state.isShowingSignIn}
           close={this.toggleSignInForm}
