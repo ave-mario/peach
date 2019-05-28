@@ -1,10 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import { ConnectedRouter as Router } from 'connected-react-router';
+import axios from 'axios';
 import * as serviceWorker from './serviceWorker';
+import App from './App';
+import store from './store/index';
+import history from './config/history';
+// import { initializePreviousToken } from './services/authentication';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+axios.defaults.baseURL = process.env.API_URL;
+// initializePreviousToken(store);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>,
+
+  document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

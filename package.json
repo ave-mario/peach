@@ -4,12 +4,20 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "connected-react-router": "^6.4.0",
+    "dotenv": "^8.0.0",
     "formik": "^1.5.7",
+    "history": "^4.9.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router": "^5.0.0",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
     "redux-saga": "^1.0.2",
+    "reduxsauce": "^1.1.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {
@@ -58,10 +66,10 @@
   },
   "lint-staged": {
     "src/**/*.{js, jsx}": [
-      "eslint"
+      "eslint --fix"
     ],
     "src/**/*.{js,jsx,json,md}": [
-      "prettier --list-different"
+      "prettier --write"
     ]
   },
   "commitlint": {
