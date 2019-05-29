@@ -6,7 +6,7 @@ import loginActions from '../actions/login.actions';
 export default function* watchSignIn() {
   yield takeLeading(loginActions.Types.LOGIN_REQUEST, function*({ payload }) {
     try {
-      yield call(axios.post, '/clients/code');
+      yield call(axios.post, '/clients/code', payload);
       // редирект на поле с кодом
       const response = yield call(axios.post, '/clents/login', payload);
       const { token, ...user } = response.data; // tokens.accessToken

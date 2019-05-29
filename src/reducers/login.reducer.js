@@ -8,10 +8,12 @@ export const INITIAL_STATE = {
   error: '',
 };
 
-export const request = state =>
-  state.merge({
+export const request = state => {
+  return {
+    ...state,
     isSended: true,
-  });
+  };
+};
 
 export const success = state =>
   state.merge({

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import {Button} from "../../shared/buttons.css";
-import SignIn from '../sign_in';
+import { Button } from '../../shared/buttons.css';
+import SignInContainer from '../../containers/login.container';
 import SignUp from '../sign_up';
 
 class Main extends Component {
@@ -12,39 +12,36 @@ class Main extends Component {
       isShowingSignIn: false,
       isShowingSignUp: false,
     };
+    this.toggleSignInForm = this.toggleSignInForm.bind(this);
+    this.toggleSignUpForm = this.toggleSignUpForm.bind(this);
   }
 
-  toggleSignInForm = () => {
+  toggleSignInForm() {
     this.setState(prevState => ({
       isShowingSignIn: !prevState.isShowingSignIn,
-      isShowingSignUp: false
+      isShowingSignUp: false,
     }));
-  };
+  }
 
-  toggleSignUpForm = () => {
+  toggleSignUpForm() {
     this.setState(prevState => ({
       isShowingSignUp: !prevState.isShowingSignUp,
-      isShowingSignIn: false
+      isShowingSignIn: false,
     }));
-  };
+  }
 
   render() {
+    const { isShowingSignIn, isShowingSignUp } = this.state;
     return (
       <div>
-        <Button onClick={this.toggleSignInForm}>
-          Login
-        </Button>
-        <Button onClick={this.toggleSignUpForm}>
-          SignUp
-        </Button>
-        <SignIn
-          show={this.state.isShowingSignIn}
+        <Button onClick={this.toggleSignInForm}>Login</Button>
+        <Button onClick={this.toggleSignUpForm}>SignUp</Button>
+        <SignInContainer
+          handleSubmit={this.submitForm}
+          show={isShowingSignIn}
           close={this.toggleSignInForm}
         />
-        <SignUp
-          show={this.state.isShowingSignUp}
-          close={this.toggleSignUpForm}
-        />
+        <SignUp show={isShowingSignUp} close={this.toggleSignUpForm} />
       </div>
     );
   }
