@@ -8,10 +8,10 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 import store from './store/index';
 import history from './config/history';
-// import { initializePreviousToken } from './services/authentication';
+import { initializePreviousToken } from './services/get_local_token';
 
 axios.defaults.baseURL = 'http://localhost:3001/api/';
-// initializePreviousToken(store);
+initializePreviousToken(store);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -27,10 +27,8 @@ class SignIn extends Component {
   handleSubmit(e) {
     const { attemtLogin } = this.props;
     const { phoneNumber } = this.state;
-    // console.log(this.props);
     e.preventDefault();
-    // console.log(this.state.phoneNumber);
-    attemtLogin(phoneNumber); // ???
+    attemtLogin(phoneNumber);
   }
 
   render() {
@@ -70,6 +68,7 @@ class SignIn extends Component {
 SignIn.propTypes = {
   attemtLogin: PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired,
-  close: PropTypes.objectOf.isRequired,
+  close: PropTypes.func.isRequired,
 };
+
 export default SignIn;
