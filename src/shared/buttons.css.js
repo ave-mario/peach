@@ -50,4 +50,4 @@ const CrossButton = styled.span`
   }
 `;
 
-export {Button, CrossButton};
+export { Button, CrossButton };
