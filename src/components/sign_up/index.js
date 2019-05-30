@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { Button, CrossButton } from '../../shared/buttons.css';
 import PropTypes from 'prop-types';
+import { Button, CrossButton } from '../../shared/buttons.css';
 import {
   ModalForm,
   FormHeader,
