@@ -2,3 +2,4 @@ src/ServiceWorker.js
 node_modules/*
 public/*
 build/*
+src/__tests__/*
