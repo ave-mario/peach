@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import SignUp from '../components/sign_up';
 import Actions from '../actions/sign_up.actions';
 
-const email = '1234567@gmail.com'; // /////will redo after impl on server///////
+// TODO: user should be able to choose between email/phoneNumber
+const email = '1234567@gmail.com';
 
 const mapStateToProps = () => ({});
 

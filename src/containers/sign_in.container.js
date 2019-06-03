@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import SignIn from '../components/sign_in';
 import Actions from '../actions/sign_in.actions';
 
-const loginCode = '123456'; // /////will redo after impl on server///////
+// TODO: redo loginCode after implementing at API
+const loginCode = '123456';
 
 const mapStateToProps = () => ({});
 
