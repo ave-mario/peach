@@ -28,7 +28,9 @@ class SignIn extends Component {
     e.preventDefault();
     const { attemtLogin } = this.props;
     const { phoneNumber } = this.state;
-    attemtLogin(phoneNumber);
+    // TODO: redo loginCode after implementing at API
+    const loginCode = '123456';
+    attemtLogin(phoneNumber, loginCode);
   }
 
   render() {

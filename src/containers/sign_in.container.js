@@ -5,10 +5,8 @@ import Actions from '../actions/sign_in.actions';
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => {
-  // TODO: redo loginCode after implementing at API
-  const loginCode = '123456';
   return {
-    attemtLogin: phoneNumber =>
+    attemtLogin: (phoneNumber, loginCode) =>
       dispatch(
         Actions.Creators.loginRequest({
           phoneNumber,
