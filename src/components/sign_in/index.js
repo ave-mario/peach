@@ -25,9 +25,9 @@ class SignIn extends Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
     const { attemtLogin } = this.props;
     const { phoneNumber } = this.state;
-    e.preventDefault();
     attemtLogin(phoneNumber);
   }
 
@@ -44,19 +44,20 @@ class SignIn extends Component {
           <FormHeaderText>Login</FormHeaderText>
           <CrossButton onClick={close}>×</CrossButton>
         </FormHeader>
-        <FormBody>
+        <FormBody onSubmit={this.handleSubmit} className="formBody">
           <p>Please, enter your phone number:</p>
           <FormInput
             placeholder="email or phone number"
             onChange={this.handleChange}
             name="phoneNumber"
+            className="phoneNumber"
           />
         </FormBody>
         <FormFooter>
           <Button cancel onClick={close}>
             CLOSE
           </Button>
-          <Button continue onClick={this.handleSubmit}>
+          <Button continue onClick={this.handleSubmit} type="submit">
             CONTINUE
           </Button>
         </FormFooter>

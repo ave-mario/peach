@@ -15,6 +15,7 @@ class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      email: '',
       phoneNumber: '',
       name: '',
       surname: '',
@@ -30,8 +31,8 @@ class SignUp extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { attemtToSignUp } = this.props;
-    const { phoneNumber, name, surname } = this.state;
-    attemtToSignUp(phoneNumber, name, surname);
+    const { email, phoneNumber, name, surname } = this.state;
+    attemtToSignUp(email, phoneNumber, name, surname);
   }
 
   render() {
@@ -47,20 +48,29 @@ class SignUp extends Component {
           <FormHeaderText>SignUp</FormHeaderText>
           <CrossButton onClick={close}>×</CrossButton>
         </FormHeader>
-        <FormBody>
+        <FormBody onSubmit={this.handleSubmit} className="formBody">
           <p>Please, enter your information:</p>
           <FormInput
-            placeholder="email or phone number"
+            placeholder="Email"
+            name="email"
+            className="email"
+            onChange={this.handleChange}
+          />
+          <FormInput
+            placeholder="Phone number"
             name="phoneNumber"
+            className="phoneNumber"
             onChange={this.handleChange}
           />
           <FormInput
             placeholder="First Name"
             name="name"
+            className="name"
             onChange={this.handleChange}
           />
           <FormInput
             placeholder="Last Name"
+            className="surname"
             name="surname"
             onChange={this.handleChange}
           />

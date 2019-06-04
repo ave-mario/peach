@@ -27,7 +27,7 @@ const FormHeaderText = styled.h3`
   padding: 0;
 `;
 
-const FormBody = styled.div`
+const FormBody = styled.form`
   padding: 10px 15px;
   text-align: center;
 `;

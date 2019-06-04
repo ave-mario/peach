@@ -8,6 +8,7 @@ export default function* watchSignUp() {
     payload,
   }) {
     try {
+      console.log(payload);
       yield call(axios.post, '/clients', payload);
       yield put(push('/'));
     } catch (error) {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import PropTypes from 'prop-types';
 import { Button } from '../../shared/buttons.css';
 import SignInContainer from '../../containers/sign_in.container';
@@ -36,9 +35,15 @@ class Main extends Component {
     const { isShowingSignIn, isShowingSignUp } = this.state;
     return (
       <div>
-        <Button onClick={this.toggleSignInForm}>Login</Button>
-        <Button onClick={this.toggleSignUpForm}>SignUp</Button>
-        <Button onClick={logout}>LOGOUT</Button>
+        <Button onClick={this.toggleSignInForm} className="signInButton">
+          Login
+        </Button>
+        <Button onClick={this.toggleSignUpForm} className="signUpButton">
+          SignUp
+        </Button>
+        <Button onClick={logout} className="logOutButton">
+          LOGOUT
+        </Button>
         <SignInContainer
           handleSubmit={this.submitForm}
           show={isShowingSignIn}
