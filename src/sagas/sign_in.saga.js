@@ -2,7 +2,7 @@ import { takeLeading, take, call, put } from 'redux-saga/effects';
 import { push } from 'connected-react-router';
 import axios from 'axios';
 import loginActions from '../actions/sign_in.actions';
-import { storeToken } from '../services/get_local_token';
+import { storeToken, clearToken } from '../services/get_local_token';
 
 export default function* watchSignIn() {
   yield takeLeading(loginActions.Types.LOGIN_REQUEST, function*({ payload }) {
@@ -16,6 +16,17 @@ export default function* watchSignIn() {
       yield call(storeToken, response);
       yield put(push('/'));
       yield take(loginActions.Types.LOGOUT);
+      yield call(clearToken);
+    } catch (error) {
+      // TODO: error message
+    }
+  });
+}
+
+export function* watchLogOut() {
+  yield takeLeading(loginActions.Types.LOGOUT, function*() {
+    try {
+      yield call(clearToken);
     } catch (error) {
       // TODO: error message
     }
