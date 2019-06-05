@@ -7,7 +7,6 @@ import { storeToken } from '../services/get_local_token';
 export default function* watchSignIn() {
   yield takeLeading(loginActions.Types.LOGIN_REQUEST, function*({ payload }) {
     try {
-      console.log(payload);
       yield call(axios.post, '/clients/code', payload);
       // редирект на поле с кодом
       const response = yield call(axios.post, '/clients/login', payload);
@@ -18,7 +17,7 @@ export default function* watchSignIn() {
       yield put(push('/'));
       yield take(loginActions.Types.LOGOUT);
     } catch (error) {
-      // error
+      // TODO: error message
     }
   });
 }

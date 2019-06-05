@@ -10,7 +10,7 @@ import store from './store/index';
 import history from './config/history';
 import { initializePreviousToken } from './services/get_local_token';
 
-axios.defaults.baseURL = 'http://localhost:3001/api/';
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 initializePreviousToken(store);
 
 ReactDOM.render(
