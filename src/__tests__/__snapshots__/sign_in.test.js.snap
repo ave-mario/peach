@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn form: component renders correctly 1`] = `
+<div
+  className="sc-htpNat gIsAAs"
+>
+  <div
+    className="sc-bxivhb gPVRgU"
+  >
+    <h3
+      className="sc-ifAKCX bXZmPy"
+    >
+      Login
+    </h3>
+    <span
+      className="sc-bwzfXH goCgBH"
+      onClick={[MockFunction]}
+    >
+      ×
+    </span>
+  </div>
+  <form
+    className="formBody sc-EHOje fFPbRn"
+    onSubmit={[Function]}
+  >
+    <p>
+      Please, enter your phone number:
+    </p>
+    <input
+      className="phoneNumber sc-bZQynM bGXiwX"
+      name="phoneNumber"
+      onChange={[Function]}
+      placeholder="email or phone number"
+    />
+  </form>
+  <div
+    className="sc-gzVnrw dphOmL"
+  >
+    <button
+      className="sc-bdVaJa bTMOaQ"
+      onClick={[MockFunction]}
+    >
+      CLOSE
+    </button>
+    <button
+      className="sc-bdVaJa cFGEHa"
+      onClick={[Function]}
+      type="submit"
+    >
+      CONTINUE
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SignIn form: component renders correctly 2`] = `
+<div
+  className="sc-htpNat gIsAAs"
+>
+  <div
+    className="sc-bxivhb gPVRgU"
+  >
+    <h3
+      className="sc-ifAKCX bXZmPy"
+    >
+      Login
+    </h3>
+    <span
+      className="sc-bwzfXH goCgBH"
+      onClick={[MockFunction]}
+    >
+      ×
+    </span>
+  </div>
+  <form
+    className="formBody sc-EHOje fFPbRn"
+    onSubmit={[Function]}
+  >
+    <p>
+      Please, enter your phone number:
+    </p>
+    <input
+      className="phoneNumber sc-bZQynM bGXiwX"
+      name="phoneNumber"
+      onChange={[Function]}
+      placeholder="email or phone number"
+    />
+  </form>
+  <div
+    className="sc-gzVnrw dphOmL"
+  >
+    <button
+      className="sc-bdVaJa bTMOaQ"
+      onClick={[MockFunction]}
+    >
+      CLOSE
+    </button>
+    <button
+      className="sc-bdVaJa cFGEHa"
+      onClick={[Function]}
+      type="submit"
+    >
+      CONTINUE
+    </button>
+  </div>
+</div>
+`;

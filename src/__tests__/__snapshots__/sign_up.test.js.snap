@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp from: component renders correctly 1`] = `
+<div
+  className="sc-htpNat gIsAAs"
+>
+  <div
+    className="sc-bxivhb gPVRgU"
+  >
+    <h3
+      className="sc-ifAKCX bXZmPy"
+    >
+      SignUp
+    </h3>
+    <span
+      className="sc-bwzfXH goCgBH"
+      onClick={[MockFunction]}
+    >
+      ×
+    </span>
+  </div>
+  <form
+    className="formBody sc-EHOje fFPbRn"
+    onSubmit={[Function]}
+  >
+    <p>
+      Please, enter your information:
+    </p>
+    <input
+      className="email sc-bZQynM bGXiwX"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+    />
+    <input
+      className="phoneNumber sc-bZQynM bGXiwX"
+      name="phoneNumber"
+      onChange={[Function]}
+      placeholder="Phone number"
+    />
+    <input
+      className="name sc-bZQynM bGXiwX"
+      name="name"
+      onChange={[Function]}
+      placeholder="First Name"
+    />
+    <input
+      className="surname sc-bZQynM bGXiwX"
+      name="surname"
+      onChange={[Function]}
+      placeholder="Last Name"
+    />
+  </form>
+  <div
+    className="sc-gzVnrw dphOmL"
+  >
+    <button
+      className="sc-bdVaJa bTMOaQ"
+      onClick={[MockFunction]}
+    >
+      CLOSE
+    </button>
+    <button
+      className="sc-bdVaJa cFGEHa"
+      onClick={[Function]}
+    >
+      CONTINUE
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SignUp from: component renders correctly 2`] = `
+<div
+  className="sc-htpNat gIsAAs"
+>
+  <div
+    className="sc-bxivhb gPVRgU"
+  >
+    <h3
+      className="sc-ifAKCX bXZmPy"
+    >
+      SignUp
+    </h3>
+    <span
+      className="sc-bwzfXH goCgBH"
+      onClick={[MockFunction]}
+    >
+      ×
+    </span>
+  </div>
+  <form
+    className="formBody sc-EHOje fFPbRn"
+    onSubmit={[Function]}
+  >
+    <p>
+      Please, enter your information:
+    </p>
+    <input
+      className="email sc-bZQynM bGXiwX"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+    />
+    <input
+      className="phoneNumber sc-bZQynM bGXiwX"
+      name="phoneNumber"
+      onChange={[Function]}
+      placeholder="Phone number"
+    />
+    <input
+      className="name sc-bZQynM bGXiwX"
+      name="name"
+      onChange={[Function]}
+      placeholder="First Name"
+    />
+    <input
+      className="surname sc-bZQynM bGXiwX"
+      name="surname"
+      onChange={[Function]}
+      placeholder="Last Name"
+    />
+  </form>
+  <div
+    className="sc-gzVnrw dphOmL"
+  >
+    <button
+      className="sc-bdVaJa bTMOaQ"
+      onClick={[MockFunction]}
+    >
+      CLOSE
+    </button>
+    <button
+      className="sc-bdVaJa cFGEHa"
+      onClick={[Function]}
+    >
+      CONTINUE
+    </button>
+  </div>
+</div>
+`;
