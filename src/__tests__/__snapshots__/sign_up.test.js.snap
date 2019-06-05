@@ -2,13 +2,7 @@
 
 exports[`SignUp from: component renders correctly 1`] = `
 <div
-  className="sc-htpNat lgeJtQ"
-  style={
-    Object {
-      "opacity": "0",
-      "transform": "translateY(-100px)",
-    }
-  }
+  className="sc-htpNat gIsAAs"
 >
   <div
     className="sc-bxivhb gPVRgU"
@@ -78,13 +72,7 @@ exports[`SignUp from: component renders correctly 1`] = `
 
 exports[`SignUp from: component renders correctly 2`] = `
 <div
-  className="sc-htpNat lgeJtQ"
-  style={
-    Object {
-      "opacity": "1",
-      "transform": "translateY(0vh)",
-    }
-  }
+  className="sc-htpNat gIsAAs"
 >
   <div
     className="sc-bxivhb gPVRgU"

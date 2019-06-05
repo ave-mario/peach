@@ -34,14 +34,9 @@ class SignIn extends Component {
   }
 
   render() {
-    const { show, close } = this.props;
+    const { close } = this.props;
     return (
-      <ModalForm
-        style={{
-          transform: show ? 'translateY(0vh)' : 'translateY(-100px)',
-          opacity: show ? '1' : '0',
-        }}
-      >
+      <ModalForm>
         <FormHeader>
           <FormHeaderText>Login</FormHeaderText>
           <CrossButton onClick={close}>×</CrossButton>
@@ -70,7 +65,6 @@ class SignIn extends Component {
 
 SignIn.propTypes = {
   attemtLogin: PropTypes.func.isRequired,
-  show: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
 };
 

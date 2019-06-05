@@ -31,31 +31,41 @@ class Main extends Component {
   }
 
   render() {
-    const { logout } = this.props;
+    const { logout, isAuthenticated } = this.props;
     const { isShowingSignIn, isShowingSignUp } = this.state;
     return (
       <div>
-        <Button onClick={this.toggleSignInForm} className="signInButton">
-          Login
-        </Button>
-        <Button onClick={this.toggleSignUpForm} className="signUpButton">
-          SignUp
-        </Button>
-        <Button onClick={logout} className="logOutButton">
-          LOGOUT
-        </Button>
-        <SignInContainer
-          handleSubmit={this.submitForm}
-          show={isShowingSignIn}
-          close={this.toggleSignInForm}
-        />
-        <SignUpContainer show={isShowingSignUp} close={this.toggleSignUpForm} />
+        {!isAuthenticated ? (
+          <div>
+            <Button onClick={this.toggleSignInForm} className="signInButton">
+              LOGIN
+            </Button>
+            <Button onClick={this.toggleSignUpForm} className="signUpButton">
+              SIGNUP
+            </Button>
+          </div>
+        ) : null}
+        {isAuthenticated ? (
+          <Button onClick={logout} className="logOutButton">
+            LOGOUT
+          </Button>
+        ) : null}
+        {isShowingSignIn ? (
+          <SignInContainer
+            handleSubmit={this.submitForm}
+            close={this.toggleSignInForm}
+          />
+        ) : null}
+        {isShowingSignUp ? (
+          <SignUpContainer close={this.toggleSignUpForm} />
+        ) : null}
       </div>
     );
   }
 }
 
 Main.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired,
 };
 

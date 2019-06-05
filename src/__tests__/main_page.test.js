@@ -10,6 +10,7 @@ import faker from 'faker';
 describe('Main Page:', () => {
   Enzyme.configure({ adapter: new Adapter() });
   const props = {
+    isAuthenticated: false,
     logout: jest.fn(),
   };
   it('correctly triggers event when button clicked', () => {

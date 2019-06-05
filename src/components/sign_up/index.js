@@ -36,14 +36,9 @@ class SignUp extends Component {
   }
 
   render() {
-    const { show, close } = this.props;
+    const { close } = this.props;
     return (
-      <ModalForm
-        style={{
-          transform: show ? 'translateY(0vh)' : 'translateY(-100px)',
-          opacity: show ? '1' : '0',
-        }}
-      >
+      <ModalForm>
         <FormHeader>
           <FormHeaderText>SignUp</FormHeaderText>
           <CrossButton onClick={close}>×</CrossButton>
@@ -90,7 +85,6 @@ class SignUp extends Component {
 
 SignUp.propTypes = {
   attemtToSignUp: PropTypes.func.isRequired,
-  show: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
 };
 

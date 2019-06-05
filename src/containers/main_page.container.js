@@ -2,6 +2,10 @@ import { connect } from 'react-redux';
 import MainPage from '../components/main_page';
 import Actions from '../actions/sign_in.actions';
 
+const mapStateToProps = state => ({
+  isAuthenticated: state.login.isAuthenticated,
+});
+
 const mapDispatchToProps = dispatch => {
   return {
     logout: () => {
@@ -11,7 +15,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const MainPageContainer = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
   Actions.Types.logout,
 )(MainPage);

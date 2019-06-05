@@ -4,6 +4,7 @@ const ModalForm = styled.div`
   background: white;
   border: 1px solid #d0cccc;
   border-radius: 20px;
+  position: absolute;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   margin: 100px auto 0;
   transition: all 0.8s;
