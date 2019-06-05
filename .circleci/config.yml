@@ -12,7 +12,7 @@ jobs:
           command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
-          path:
+          paths:
             - ./node_modules
   lint:
     docker:
