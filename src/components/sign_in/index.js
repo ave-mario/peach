@@ -33,6 +33,8 @@ class SignIn extends Component {
     attemtLogin(phoneNumber, loginCode);
   }
 
+  // TODO: Form validation
+
   render() {
     const { close } = this.props;
     return (
