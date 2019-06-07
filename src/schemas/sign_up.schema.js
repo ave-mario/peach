@@ -9,10 +9,7 @@ const validationSchema = object().shape({
     .required('Email is required')
     .min(5, 'Enter > 4 characters')
     .max(20, 'Enter < 20 characters')
-    .matches(
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-      'The email is incorrect',
-    ),
+    .email('The email is incorrect'),
   name: string()
     .required('Name is required')
     .min(2, 'Enter > 1 character')
