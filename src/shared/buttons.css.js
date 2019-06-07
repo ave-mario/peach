@@ -6,7 +6,9 @@ const Button = styled.button`
   font-weight: bold;
   outline: none;
   padding: 10px;
-
+  :disabled {
+    opacity: 0.4;
+  }
   ${props =>
     props.cancel &&
     css`
