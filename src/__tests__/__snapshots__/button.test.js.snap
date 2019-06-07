@@ -9,6 +9,10 @@ exports[`Buttons: component rednders correctly 1`] = `
   padding: 10px;
 }
 
+.c0:disabled {
+  opacity: 0.4;
+}
+
 <button
   className="c0"
 />

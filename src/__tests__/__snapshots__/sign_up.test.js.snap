@@ -29,40 +29,50 @@ exports[`SignUp from: component renders correctly 1`] = `
     <input
       className="email sc-bZQynM bGXiwX"
       name="email"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="Email"
+      value=""
     />
     <input
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="Phone number"
+      value=""
     />
     <input
       className="name sc-bZQynM bGXiwX"
       name="name"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="First Name"
+      value=""
     />
     <input
       className="surname sc-bZQynM bGXiwX"
       name="surname"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="Last Name"
+      value=""
     />
   </form>
   <div
     className="sc-gzVnrw dphOmL"
   >
     <button
-      className="sc-bdVaJa bTMOaQ"
+      className="sc-bdVaJa fTgRSZ"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa cFGEHa"
+      className="sc-bdVaJa iiSudm"
+      disabled={true}
       onClick={[Function]}
+      type="submit"
     >
       CONTINUE
     </button>
@@ -99,40 +109,50 @@ exports[`SignUp from: component renders correctly 2`] = `
     <input
       className="email sc-bZQynM bGXiwX"
       name="email"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="Email"
+      value=""
     />
     <input
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="Phone number"
+      value=""
     />
     <input
       className="name sc-bZQynM bGXiwX"
       name="name"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="First Name"
+      value=""
     />
     <input
       className="surname sc-bZQynM bGXiwX"
       name="surname"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="Last Name"
+      value=""
     />
   </form>
   <div
     className="sc-gzVnrw dphOmL"
   >
     <button
-      className="sc-bdVaJa bTMOaQ"
+      className="sc-bdVaJa fTgRSZ"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa cFGEHa"
+      className="sc-bdVaJa iiSudm"
+      disabled={true}
       onClick={[Function]}
+      type="submit"
     >
       CONTINUE
     </button>
