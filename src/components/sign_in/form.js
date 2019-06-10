@@ -18,7 +18,6 @@ const SignInForm = ({
   handleSubmit,
   values,
   dirty,
-  isSubmitting,
   close,
 }) => {
   return (
@@ -50,7 +49,7 @@ const SignInForm = ({
           continue
           onClick={handleSubmit}
           type="submit"
-          disabled={!dirty || isSubmitting || errors.phoneNumber}
+          disabled={!dirty || errors.phoneNumber}
         >
           CONTINUE
         </Button>
@@ -66,7 +65,6 @@ SignInForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
-  isSubmitting: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
 };
 

@@ -18,7 +18,6 @@ const SignUpForm = ({
   handleSubmit,
   values,
   dirty,
-  isSubmitting,
   close,
 }) => {
   return (
@@ -88,7 +87,6 @@ const SignUpForm = ({
           type="submit"
           disabled={
             !dirty ||
-            isSubmitting ||
             errors.phoneNumber ||
             errors.email ||
             errors.name ||
@@ -109,7 +107,6 @@ SignUpForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
-  isSubmitting: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
 };
 
