@@ -1,8 +1,8 @@
 import { takeLeading, take, call, put } from 'redux-saga/effects';
 import { push } from 'connected-react-router';
 import axios from 'axios';
-import loginActions from '../actions/sign_in.actions';
-import { storeToken, clearToken } from '../services/get_local_token';
+import loginActions from 'actions/sign_in.actions';
+import { storeToken, clearToken } from 'services/get_local_token';
 
 export default function* watchSignIn() {
   yield takeLeading(loginActions.Types.LOGIN_REQUEST, function*({ payload }) {

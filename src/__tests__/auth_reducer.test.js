@@ -1,4 +1,4 @@
-import reducer from '../reducers/auth.reducer';
+import reducer from 'reducers/auth.reducer';
 
 describe('Auth reducers:', () => {
   it('should return the initial state', () => {

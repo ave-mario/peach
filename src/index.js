@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'index.css';
 import { Provider } from 'react-redux';
 import { ConnectedRouter as Router } from 'connected-react-router';
 import axios from 'axios';
-import * as serviceWorker from './serviceWorker';
-import App from './App';
-import store from './store/index';
-import history from './config/history';
-import { initializePreviousToken } from './services/get_local_token';
+import * as serviceWorker from 'serviceWorker';
+import App from 'App';
+import store from 'store/index';
+import history from 'config/history';
+import { initializePreviousToken } from 'services/get_local_token';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 initializePreviousToken(store);

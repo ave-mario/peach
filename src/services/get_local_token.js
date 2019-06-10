@@ -1,4 +1,4 @@
-import loginActions from '../actions/sign_in.actions';
+import loginActions from 'actions/sign_in.actions';
 
 const AUTH_TOKEN_KEY = 'auth token';
 const USER_KEY = 'user';
