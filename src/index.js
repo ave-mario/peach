@@ -9,8 +9,9 @@ import App from 'App';
 import store from 'store/index';
 import history from 'config/history';
 import { initializePreviousToken } from 'services/get_local_token';
+import api from 'config/server';
 
-axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
+axios.defaults.baseURL = `${api.address}${api.port}${api.route}`;
 initializePreviousToken(store);
 
 ReactDOM.render(

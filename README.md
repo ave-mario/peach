@@ -10,12 +10,7 @@ Use [Node.js](https://nodejs.org/en/) to install app
 npm i
 ```
 
-Also u need to create '.env' file in root folder
-
-```
-REACT_APP_BASE_URL=YOUR_API_ADDRESS_HERE
-NODE_PATH=src
-```
+You can cofigure server path through 'src/config/server'
 
 ## Usage
 
