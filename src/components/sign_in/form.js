@@ -31,11 +31,12 @@ const SignInForm = ({
         <p>Please, enter your phone number:</p>
         <FormInput
           placeholder="email or phone number"
+          name="phoneNumber"
+          className="phoneNumber"
+          autoComplete="tel"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.phoneNumber}
-          name="phoneNumber"
-          className="phoneNumber"
         />
         {errors.phoneNumber && (
           <ErrorMessage>{errors.phoneNumber}</ErrorMessage>

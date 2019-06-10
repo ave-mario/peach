@@ -31,6 +31,7 @@ const SignUpForm = ({
         <p>Please, enter your information:</p>
         <FormInput
           placeholder="Email"
+          autoComplete="email"
           name="email"
           className="email"
           onChange={handleChange}
@@ -43,6 +44,7 @@ const SignUpForm = ({
         <FormInput
           placeholder="Phone number"
           name="phoneNumber"
+          autoComplete="tel"
           className="phoneNumber"
           onChange={handleChange}
           onBlur={handleBlur}
@@ -54,6 +56,7 @@ const SignUpForm = ({
         <FormInput
           placeholder="First Name"
           name="name"
+          autoComplete="given-name"
           className="name"
           onChange={handleChange}
           onBlur={handleBlur}
@@ -66,6 +69,7 @@ const SignUpForm = ({
           placeholder="Last Name"
           className="surname"
           name="surname"
+          autoComplete="family-name"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.surname}
