@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SignIn from '../components/sign_in';
+import SignInForm from '../components/sign_in/form';
 import faker from 'faker';
 
 describe('SignIn form:', () => {
@@ -31,24 +32,5 @@ describe('SignIn form:', () => {
   it('component doesnt render by default', () => {
     const SignInComponent = mount(<SignIn {...props} />);
     expect(SignInComponent.prop('show')).toEqual(false);
-  });
-
-  it('inputs send value to state', () => {
-    const SignInComponent = shallow(<SignIn {...props} />);
-    SignInComponent.find('.phoneNumber').simulate('change', {
-      target: { name: 'phoneNumber', value: fakePhoneNumber },
-    });
-    expect(SignInComponent.state('phoneNumber')).toEqual(fakePhoneNumber);
-  });
-
-  it('when form submited - prevent default', () => {
-    const SignInComponent = shallow(<SignIn {...props} />);
-    let prevented = false;
-    SignInComponent.find('.formBody').simulate('submit', {
-      preventDefault: () => {
-        prevented = true;
-      },
-    });
-    expect(prevented).toBe(true);
   });
 });

@@ -34,30 +34,4 @@ describe('SignUp from:', () => {
     const SignUpComponent = mount(<SignUp {...props} />);
     expect(SignUpComponent.prop('show')).toEqual(false);
   });
-
-  it('inputs send correct value to state', () => {
-    const SignUpComponent = shallow(<SignUp {...props} />);
-    SignUpComponent.find('.phoneNumber').simulate('change', {
-      target: { name: 'phoneNumber', value: fakePhoneNumber },
-    });
-    SignUpComponent.find('.name').simulate('change', {
-      target: { name: 'name', value: fakeName },
-    });
-    SignUpComponent.find('.surname').simulate('change', {
-      target: { name: 'surname', value: fakeSurname },
-    });
-    expect(SignUpComponent.state('phoneNumber')).toEqual(fakePhoneNumber);
-    expect(SignUpComponent.state('name')).toEqual(fakeName);
-    expect(SignUpComponent.state('surname')).toEqual(fakeSurname);
-  });
-  it('when form submited - prevent default', () => {
-    const SignUpComponent = shallow(<SignUp {...props} />);
-    let prevented = false;
-    SignUpComponent.find('.formBody').simulate('submit', {
-      preventDefault: () => {
-        prevented = true;
-      },
-    });
-    expect(prevented).toBe(true);
-  });
 });

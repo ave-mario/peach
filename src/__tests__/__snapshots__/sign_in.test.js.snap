@@ -29,21 +29,24 @@ exports[`SignIn form: component renders correctly 1`] = `
     <input
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="email or phone number"
+      value=""
     />
   </form>
   <div
     className="sc-gzVnrw dphOmL"
   >
     <button
-      className="sc-bdVaJa bTMOaQ"
+      className="sc-bdVaJa fTgRSZ"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa cFGEHa"
+      className="sc-bdVaJa iiSudm"
+      disabled={true}
       onClick={[Function]}
       type="submit"
     >
@@ -82,21 +85,24 @@ exports[`SignIn form: component renders correctly 2`] = `
     <input
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
+      onBlur={[Function]}
       onChange={[Function]}
       placeholder="email or phone number"
+      value=""
     />
   </form>
   <div
     className="sc-gzVnrw dphOmL"
   >
     <button
-      className="sc-bdVaJa bTMOaQ"
+      className="sc-bdVaJa fTgRSZ"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa cFGEHa"
+      className="sc-bdVaJa iiSudm"
+      disabled={true}
       onClick={[Function]}
       type="submit"
     >
