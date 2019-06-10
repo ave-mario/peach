@@ -18,6 +18,7 @@ const SignUpForm = ({
   handleSubmit,
   values,
   dirty,
+  touched,
   close,
 }) => {
   return (
@@ -37,7 +38,7 @@ const SignUpForm = ({
           onBlur={handleBlur}
           value={values.email}
         />
-        {errors.email && (
+        {touched.email && errors.email && (
           <ErrorMessage className="error">{errors.email}</ErrorMessage>
         )}
         <FormInput
@@ -49,7 +50,7 @@ const SignUpForm = ({
           onBlur={handleBlur}
           value={values.phoneNumber}
         />
-        {errors.phoneNumber && (
+        {touched.phoneNumber && errors.phoneNumber && (
           <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
         )}
         <FormInput
@@ -61,7 +62,7 @@ const SignUpForm = ({
           onBlur={handleBlur}
           value={values.name}
         />
-        {errors.name && (
+        {touched.name && errors.name && (
           <ErrorMessage className="error">{errors.name}</ErrorMessage>
         )}
         <FormInput
@@ -73,7 +74,7 @@ const SignUpForm = ({
           onBlur={handleBlur}
           value={values.surname}
         />
-        {errors.surname && (
+        {touched.surname && errors.surname && (
           <ErrorMessage className="error">{errors.surname}</ErrorMessage>
         )}
       </FormBody>
@@ -107,6 +108,7 @@ SignUpForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
+  touched: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
 };
 

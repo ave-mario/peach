@@ -18,6 +18,7 @@ const SignInForm = ({
   handleSubmit,
   values,
   dirty,
+  touched,
   close,
 }) => {
   return (
@@ -37,7 +38,7 @@ const SignInForm = ({
           onBlur={handleBlur}
           value={values.phoneNumber}
         />
-        {errors.phoneNumber && (
+        {touched.phoneNumber && errors.phoneNumber && (
           <ErrorMessage>{errors.phoneNumber}</ErrorMessage>
         )}
       </FormBody>
@@ -65,6 +66,7 @@ SignInForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
+  touched: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
 };
 
