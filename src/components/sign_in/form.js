@@ -66,7 +66,7 @@ SignInForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
-  touched: PropTypes.bool.isRequired,
+  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   close: PropTypes.func.isRequired,
 };
 
