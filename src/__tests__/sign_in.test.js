@@ -1,14 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Enzyme, { mount, shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import SignIn from '../components/sign_in';
-import SignInForm from '../components/sign_in/form';
-import faker from 'faker';
+import SignIn from 'components/sign_in';
 
 describe('SignIn form:', () => {
   Enzyme.configure({ adapter: new Adapter() });
-  const fakePhoneNumber = faker.phone.phoneNumber;
   const props = {
     show: false,
     close: jest.fn(),

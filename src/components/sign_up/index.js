@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
-import validationSchema from '../../schemas/sign_up.schema';
+import validationSchema from 'schemas/sign_up.schema';
 import SignUpForm from './form';
 
 const SignUp = props => (

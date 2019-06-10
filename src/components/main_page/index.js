@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '../../shared/buttons.css';
-import SignInContainer from '../../containers/sign_in.container';
-import SignUpContainer from '../../containers/sign_up.container';
+import { Button } from 'shared/buttons.css';
+import SignInContainer from 'containers/sign_in.container';
+import SignUpContainer from 'containers/sign_up.container';
 
 class Main extends Component {
   constructor() {

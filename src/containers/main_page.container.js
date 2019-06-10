@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import MainPage from '../components/main_page';
-import Actions from '../actions/sign_in.actions';
+import MainPage from 'components/main_page';
+import Actions from 'actions/sign_in.actions';
 
 const mapStateToProps = state => ({
   isAuthenticated: state.login.isAuthenticated,
