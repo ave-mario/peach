@@ -1,6 +1,6 @@
 import { createReducer } from 'reduxsauce';
-import signInActions from '../actions/sign_in.actions';
-import signUpActions from '../actions/sign_up.actions';
+import signInActions from 'actions/sign_in.actions';
+import signUpActions from 'actions/sign_up.actions';
 
 export const INITIAL_STATE = {
   isAuthenticated: false,

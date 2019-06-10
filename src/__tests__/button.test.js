@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Button } from '../shared/buttons.css';
+import { Button } from 'shared/buttons.css';
 import 'jest-styled-components';
 
 describe('Buttons:', () => {
