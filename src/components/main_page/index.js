@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button } from 'shared/buttons.css';
 import SignInContainer from 'containers/sign_in.container';
@@ -31,23 +32,23 @@ class Main extends Component {
   }
 
   render() {
-    const { logout, isAuthenticated } = this.props;
+    const { logout, isAuthenticated, t } = this.props;
     const { isShowingSignIn, isShowingSignUp } = this.state;
     return (
       <div>
         {!isAuthenticated ? (
           <div>
             <Button onClick={this.toggleSignInForm} className="signInButton">
-              LOGIN
+              {t('LoginButton')}
             </Button>
             <Button onClick={this.toggleSignUpForm} className="signUpButton">
-              SIGNUP
+              {t('SignUpButton')}
             </Button>
           </div>
         ) : null}
         {isAuthenticated ? (
           <Button onClick={logout} className="logOutButton">
-            LOGOUT
+            {t('LogoutButton')}
           </Button>
         ) : null}
         {isShowingSignIn ? (
@@ -67,6 +68,7 @@ class Main extends Component {
 Main.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default Main;
+export default withTranslation('buttons')(Main);

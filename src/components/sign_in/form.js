@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
@@ -20,17 +21,18 @@ const SignInForm = ({
   dirty,
   isSubmitting,
   close,
+  t,
 }) => {
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>Login</FormHeaderText>
+        <FormHeaderText>{t('lables:Login')}</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>Please, enter your phone number:</p>
+        <p>{t('lables:LoginEnterPhoneLabel')}</p>
         <FormInput
-          placeholder="email or phone number"
+          placeholder={t('lables:EnterEmailOrPhone')}
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.phoneNumber}
@@ -43,7 +45,7 @@ const SignInForm = ({
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          CLOSE
+          {t('buttons:Close')}
         </Button>
         <Button
           continue
@@ -51,7 +53,7 @@ const SignInForm = ({
           type="submit"
           disabled={!dirty || isSubmitting || errors.phoneNumber}
         >
-          CONTINUE
+          {t('buttons:Continue')}
         </Button>
       </FormFooter>
     </ModalForm>
@@ -67,6 +69,7 @@ SignInForm.propTypes = {
   dirty: PropTypes.bool.isRequired,
   isSubmitting: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default SignInForm;
+export default withTranslation()(SignInForm);

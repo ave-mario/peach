@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
@@ -20,17 +21,18 @@ const SignUpForm = ({
   dirty,
   isSubmitting,
   close,
+  t,
 }) => {
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>SignUp</FormHeaderText>
+        <FormHeaderText>{t('lables:Signup')}</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>Please, enter your information:</p>
+        <p>{t('lables:SignUpLabel')}</p>
         <FormInput
-          placeholder="Email"
+          placeholder={t('lables:Email')}
           name="email"
           className="email"
           onChange={handleChange}
@@ -41,7 +43,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.email}</ErrorMessage>
         )}
         <FormInput
-          placeholder="Phone number"
+          placeholder={t('lables:PhoneNumber')}
           name="phoneNumber"
           className="phoneNumber"
           onChange={handleChange}
@@ -52,7 +54,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
         )}
         <FormInput
-          placeholder="First Name"
+          placeholder={t('lables:Name')}
           name="name"
           className="name"
           onChange={handleChange}
@@ -63,7 +65,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.name}</ErrorMessage>
         )}
         <FormInput
-          placeholder="Last Name"
+          placeholder={t('lables:Surname')}
           className="surname"
           name="surname"
           onChange={handleChange}
@@ -76,7 +78,7 @@ const SignUpForm = ({
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          CLOSE
+          {t('buttons:Close')}
         </Button>
         <Button
           continue
@@ -91,7 +93,7 @@ const SignUpForm = ({
             errors.surname
           }
         >
-          CONTINUE
+          {t('buttons:ContinueSignup')}
         </Button>
       </FormFooter>
     </ModalForm>
@@ -107,6 +109,7 @@ SignUpForm.propTypes = {
   dirty: PropTypes.bool.isRequired,
   isSubmitting: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default SignUpForm;
+export default withTranslation()(SignUpForm);

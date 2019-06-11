@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "LoginButton": "LOGIN",
+    "LogoutButton": "LOGOUT",
+    "SignUpButton": "SIGNUP",
+    "Close": "CLOSE",
+    "Continue": "SEND CODE",
+    "ContinueSignup": "CONTINUE"
+  },
+  "lables": {
+    "Login": "Login",
+    "Signup": "Signup",
+    "LoginEnterPhoneLabel": "Please, enter your phone number:",
+    "SignUpLabel": "Please, enter your information:",
+    "Email": "Email",
+    "PhoneNumber": "Phone number",
+    "Name": "Name",
+    "Surname": "Surname",
+    "EnterEmailOrPhone": "email or phone number"
+  }
+}

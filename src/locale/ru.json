@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "LoginButton": "ВХОД",
+    "LogoutButton": "ВЫЙТИ",
+    "SignUpButton": "РЕГИСТРАЦИЯ",
+    "Close": "ЗАКРЫТЬ",
+    "Continue": "ОТПРАВИТЬ КОД",
+    "ContinueSignup": "ПРОДОЛЖИТь"
+  },
+  "lables": {
+    "Login": "Вход",
+    "Signup": "Регистрация",
+    "LoginEnterPhoneLabel": "Пожалуйста, введите ваш мобильный телефон:",
+    "SignUpLabel": "Пожалуйста, введите вашу информацию:",
+    "Email": "Email",
+    "PhoneNumber": "Мобильный телефон",
+    "Name": "Имя",
+    "Surname": "Фафилия",
+    "EnterEmailOrPhone": "email или телефон"
+  }
+}
