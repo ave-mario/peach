@@ -1,8 +1,8 @@
 {
   "buttons": {
-    "LoginButton": "LOGIN",
-    "LogoutButton": "LOGOUT",
-    "SignUpButton": "SIGNUP",
+    "Login": "LOGIN",
+    "Logout": "LOGOUT",
+    "SignUp": "SIGNUP",
     "Close": "CLOSE",
     "Continue": "SEND CODE",
     "ContinueSignup": "CONTINUE"
@@ -10,8 +10,8 @@
   "lables": {
     "Login": "Login",
     "Signup": "Signup",
-    "LoginEnterPhoneLabel": "Please, enter your phone number:",
-    "SignUpLabel": "Please, enter your information:",
+    "LoginEnterPhone": "Please, enter your phone number:",
+    "SignUp": "Please, enter your information:",
     "Email": "Email",
     "PhoneNumber": "Phone number",
     "Name": "Name",

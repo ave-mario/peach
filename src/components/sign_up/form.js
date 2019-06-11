@@ -30,7 +30,7 @@ const SignUpForm = ({
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>{t('lables:SignUpLabel')}</p>
+        <p>{t('lables:SignUp')}</p>
         <FormInput
           placeholder={t('lables:Email')}
           name="email"

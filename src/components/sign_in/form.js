@@ -30,7 +30,7 @@ const SignInForm = ({
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>{t('lables:LoginEnterPhoneLabel')}</p>
+        <p>{t('lables:LoginEnterPhone')}</p>
         <FormInput
           placeholder={t('lables:EnterEmailOrPhone')}
           onChange={handleChange}

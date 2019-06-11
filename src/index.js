@@ -11,7 +11,7 @@ import store from 'store/index';
 import history from 'config/history';
 import { initializePreviousToken } from 'services/get_local_token';
 import api from 'config/server';
-import i18next from './config/i18next';
+import i18next from './config/localization';
 
 axios.defaults.baseURL = `${api.address}${api.port}${api.route}`;
 initializePreviousToken(store);

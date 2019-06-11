@@ -39,16 +39,16 @@ class Main extends Component {
         {!isAuthenticated ? (
           <div>
             <Button onClick={this.toggleSignInForm} className="signInButton">
-              {t('LoginButton')}
+              {t('Login')}
             </Button>
             <Button onClick={this.toggleSignUpForm} className="signUpButton">
-              {t('SignUpButton')}
+              {t('SignUp')}
             </Button>
           </div>
         ) : null}
         {isAuthenticated ? (
           <Button onClick={logout} className="logOutButton">
-            {t('LogoutButton')}
+            {t('Logout')}
           </Button>
         ) : null}
         {isShowingSignIn ? (
