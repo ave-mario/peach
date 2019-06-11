@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'shared/buttons.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
+import VerificationContainer from 'containers/validation.container';
 
 class Main extends Component {
   constructor() {
@@ -31,7 +32,7 @@ class Main extends Component {
   }
 
   render() {
-    const { logout, isAuthenticated } = this.props;
+    const { logout, isAuthenticated, isSended } = this.props;
     const { isShowingSignIn, isShowingSignUp } = this.state;
     return (
       <div>
@@ -44,21 +45,21 @@ class Main extends Component {
               SIGNUP
             </Button>
           </div>
-        ) : null}
-        {isAuthenticated ? (
+        ) : (
           <Button onClick={logout} className="logOutButton">
             LOGOUT
           </Button>
-        ) : null}
-        {isShowingSignIn ? (
+        )}
+        {isShowingSignIn && !isSended && !isAuthenticated ? (
           <SignInContainer
             handleSubmit={this.submitForm}
             close={this.toggleSignInForm}
           />
         ) : null}
-        {isShowingSignUp ? (
+        {isShowingSignUp && !isSended && !isAuthenticated ? (
           <SignUpContainer close={this.toggleSignUpForm} />
         ) : null}
+        {isSended ? <VerificationContainer /> : null}
       </div>
     );
   }
@@ -66,6 +67,7 @@ class Main extends Component {
 
 Main.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
+  isSended: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired,
 };
 

@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
 import SignIn from 'components/sign_in';
-import Actions from 'actions/sign_in.actions';
+import Actions from 'actions/verification.actons';
 
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => {
   return {
-    attemtLogin: (phoneNumber, loginCode) =>
+    attemtLogin: phoneNumber =>
       dispatch(
-        Actions.Creators.loginRequest({
+        Actions.Creators.codeRequest({
           phoneNumber,
-          loginCode,
         }),
       ),
   };

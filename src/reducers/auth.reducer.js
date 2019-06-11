@@ -1,6 +1,7 @@
 import { createReducer } from 'reduxsauce';
 import signInActions from 'actions/sign_in.actions';
 import signUpActions from 'actions/sign_up.actions';
+import verificationActions from 'actions/verification.actons';
 
 export const INITIAL_STATE = {
   isAuthenticated: false,
@@ -9,13 +10,19 @@ export const INITIAL_STATE = {
   error: '',
 };
 
-export const signInRequest = (state, action) => {
+export const codeRequest = (state, action) => {
   return {
     ...state,
-    isSended: true,
     data: {
       phoneNumber: action.payload.phoneNumber,
     },
+    isSended: true,
+  };
+};
+
+export const signInRequest = state => {
+  return {
+    ...state,
   };
 };
 
@@ -24,6 +31,7 @@ export const signInSuccess = (state, action) => {
   return {
     ...state,
     isAuthenticated: true,
+    isSended: false,
     data: {
       phoneNumber: user.phoneNumber,
       name: user.name,
@@ -38,14 +46,22 @@ export const signInFailure = state =>
     // error
   });
 
-export const signUpRequest = state => {
+export const signUpRequest = (state, action) => {
   return {
     ...state,
     isSended: true,
+    data: {
+      phoneNumber: action.payload.phoneNumber,
+    },
   };
 };
 
-export const signUpSuccess = () => {};
+export const signUpSuccess = state => {
+  return {
+    ...state,
+    isSended: false,
+  };
+};
 
 export const signUpFailure = () => {};
 
@@ -56,6 +72,7 @@ export const logout = () => {
 };
 
 const authReducer = createReducer(INITIAL_STATE, {
+  [verificationActions.Types.CODE_REQUEST]: codeRequest,
   [signInActions.Types.LOGIN_REQUEST]: signInRequest,
   [signInActions.Types.LOGIN_SUCCESS]: signInSuccess,
   [signInActions.Types.LOGIN_FAILURE]: signInFailure,
