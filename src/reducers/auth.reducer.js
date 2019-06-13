@@ -7,7 +7,7 @@ export const INITIAL_STATE = {
   isAuthenticated: false,
   isSended: false,
   data: {},
-  error: '',
+  error: null,
 };
 
 export const codeRequest = (state, action) => {
@@ -16,6 +16,7 @@ export const codeRequest = (state, action) => {
     data: {
       phoneNumber: action.payload.phoneNumber,
     },
+    error: null,
   };
 };
 
@@ -57,12 +58,10 @@ export const signInSuccess = (state, action) => {
   };
 };
 
-export const signInFailure = (state, { error }) => {
-  console.log({ error });
+export const signInFailure = (state, action) => {
   return {
     ...state,
-    isSended: false,
-    error: error.message,
+    error: action.error,
   };
 };
 
@@ -79,16 +78,16 @@ export const signUpRequest = (state, action) => {
 export const signUpSuccess = state => {
   return {
     ...state,
-    isSended: false,
+    isSended: true,
     error: null,
   };
 };
 
-export const signUpFailure = (state, error) => {
+export const signUpFailure = (state, action) => {
   return {
     ...state,
     isSended: false,
-    error,
+    error: action.error,
   };
 };
 
@@ -102,9 +101,9 @@ const authReducer = createReducer(INITIAL_STATE, {
   [verificationActions.Types.CODE_REQUEST]: codeRequest,
   [verificationActions.Types.CODE_FAILURE]: codeFailure,
   [verificationActions.Types.CODE_SUCCESS]: codeSuccess,
-  [signInActions.Types.LOGIN_REQUEST]: signInRequest,
-  [signInActions.Types.LOGIN_SUCCESS]: signInSuccess,
-  [signInActions.Types.LOGIN_FAILURE]: signInFailure,
+  [signInActions.Types.SIGN_IN_REQUEST]: signInRequest,
+  [signInActions.Types.SIGN_IN_SUCCESS]: signInSuccess,
+  [signInActions.Types.SIGN_IN_FAILURE]: signInFailure,
   [signInActions.Types.LOGOUT]: logout,
   [signUpActions.Types.SIGN_UP_REQUEST]: signUpRequest,
   [signUpActions.Types.SIGN_UP_SUCCESS]: signUpSuccess,

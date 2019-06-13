@@ -4,6 +4,11 @@ import { Button } from 'shared/buttons.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
 import VerificationContainer from 'containers/validation.container';
+import {
+  SnackBar,
+  SnackBarImage,
+  SnackBarDescription,
+} from 'shared/snackbar.css';
 
 class Main extends Component {
   constructor() {
@@ -13,10 +18,20 @@ class Main extends Component {
       isShowingSignIn: false,
       isShowingSignUp: false,
       isShowingCodeInput: false,
+      show: false,
+      hasTriggered: false,
     };
     this.toggleSignInForm = this.toggleSignInForm.bind(this);
     this.toggleSignUpForm = this.toggleSignUpForm.bind(this);
     this.toggleCodeInput = this.toggleCodeInput.bind(this);
+    this.toggleSnackBar = this.toggleSnackBar.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { error } = this.props;
+    if (nextProps.error !== error) {
+      this.setState({ hasTriggered: false });
+    }
   }
 
   toggleSignInForm() {
@@ -43,9 +58,29 @@ class Main extends Component {
     this.setState({ isShowingCodeInput: false });
   }
 
+  toggleSnackBar() {
+    const { hasTriggered } = this.state;
+    const { error } = this.props;
+    if (!hasTriggered && error) {
+      this.setState({ show: true });
+      setTimeout(
+        function() {
+          this.setState({ show: false });
+        }.bind(this),
+        5000,
+      );
+      this.setState({ hasTriggered: true });
+    }
+  }
+
   render() {
-    const { logout, isAuthenticated, isSended } = this.props;
-    const { isShowingSignIn, isShowingSignUp, isShowingCodeInput } = this.state;
+    const { logout, isAuthenticated, isSended, error } = this.props;
+    const {
+      isShowingSignIn,
+      isShowingSignUp,
+      isShowingCodeInput,
+      show,
+    } = this.state;
     return (
       <div>
         {!isAuthenticated ? (
@@ -71,6 +106,11 @@ class Main extends Component {
         {isSended && isShowingCodeInput ? (
           <VerificationContainer close={this.toggleCodeInput} />
         ) : null}
+        {!show ? this.toggleSnackBar() : null}
+        <SnackBar show={show}>
+          <SnackBarImage></SnackBarImage>
+          <SnackBarDescription>{error}</SnackBarDescription>
+        </SnackBar>
       </div>
     );
   }
@@ -78,8 +118,9 @@ class Main extends Component {
 
 Main.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
-  isSended: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired,
+  isSended: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
 };
 
 export default Main;

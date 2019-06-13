@@ -1,9 +1,9 @@
 import { createActions } from 'reduxsauce';
 
 const { Types, Creators } = createActions({
-  loginRequest: ['payload'],
-  loginSuccess: ['payload'],
-  loginFailure: ['error'],
+  signInRequest: ['payload'],
+  signInSuccess: ['payload'],
+  signInFailure: ['error'],
   logout: null,
 });
 

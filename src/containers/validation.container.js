@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => {
   return {
     attemtLogin: (phoneNumber, loginCode) =>
       dispatch(
-        Actions.Creators.loginRequest({
+        Actions.Creators.signInRequest({
           phoneNumber,
           loginCode,
         }),

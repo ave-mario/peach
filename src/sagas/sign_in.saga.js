@@ -5,19 +5,21 @@ import loginActions from 'actions/sign_in.actions';
 import { storeToken, clearToken } from 'services/get_local_token';
 
 export default function* watchSignIn() {
-  yield takeLeading(loginActions.Types.LOGIN_REQUEST, function*({ payload }) {
+  yield takeLeading(loginActions.Types.SIGN_IN_REQUEST, function*({ payload }) {
     try {
       const response = yield call(axios.post, '/clients/login', payload);
       const { ...user } = response.data.user;
       const token = response.data.tokens.accessToken;
-      yield put(loginActions.Creators.loginSuccess({ token, user }));
+      yield put(loginActions.Creators.signInSuccess({ token, user }));
       yield call(storeToken, response);
       yield put(push('/'));
       yield take(loginActions.Types.LOGOUT);
       yield call(clearToken);
     } catch (error) {
-      const errorMessage = error.response ? error.response.data : error.message;
-      yield put(loginActions.Creators.loginFailure(errorMessage));
+      const errorMessage = error.response
+        ? error.response.data.message
+        : error.message;
+      yield put(loginActions.Creators.signInFailure(errorMessage));
     }
   });
 }
