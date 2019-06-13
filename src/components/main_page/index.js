@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { Button } from 'shared/buttons.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
+import { addResourse } from 'config/localization';
+import localization from './localization.main';
 
+addResourse('Main', localization);
 class Main extends Component {
   constructor() {
     super();
@@ -71,4 +74,4 @@ Main.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation('buttons')(Main);
+export default withTranslation('Main')(Main);

@@ -2,7 +2,7 @@ export default {
   ru: {
     required: {
       phoneNumber: 'Требуется номер телефона',
-      email: 'Требуется номер email',
+      email: 'Требуется email',
       name: 'Ваше имя обязательно',
       surname: 'Ваша фамилия обязательная',
     },
@@ -14,7 +14,7 @@ export default {
   en: {
     required: {
       phoneNumber: 'Phone number is required',
-      email: 'Phone number is incorrect',
+      email: 'Email is required',
       name: 'Name is required',
       surname: 'Surname is required',
     },

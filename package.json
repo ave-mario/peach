@@ -36,7 +36,7 @@
     "check-staged": "lint-staged",
     "husky:commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "husky:post-checkout": "lint-staged",
-    "husky:pre-commit": " npm run test  && lint-staged",
+    "husky:pre-commit": "npm run test && lint-staged",
     "husky:pre-push": "npm run test &&  npm run lint ",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
   },

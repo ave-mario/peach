@@ -10,7 +10,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     <h3
       className="sc-ifAKCX bXZmPy"
     >
-      SIGN UP
+      Sign up for HOTEL
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
@@ -90,7 +90,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     <h3
       className="sc-ifAKCX bXZmPy"
     >
-      SIGN UP
+      Sign up for HOTEL
     </h3>
     <span
       className="sc-bwzfXH goCgBH"

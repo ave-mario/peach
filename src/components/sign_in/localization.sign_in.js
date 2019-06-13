@@ -13,7 +13,7 @@ export default {
   },
   en: {
     lables: {
-      Login: 'Login',
+      Login: 'Sing in',
       LoginEnterPhone: 'Please, enter your phone number:',
       EnterEmailOrPhone: 'email or phone number',
     },
