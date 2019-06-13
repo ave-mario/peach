@@ -9,9 +9,10 @@ import {
   FormHeaderText,
   FormInput,
 } from 'shared/modal_form.css';
+import './input.css';
 import ErrorMessage from 'shared/error.css';
 
-const SignInForm = ({
+const VerificationForm = ({
   errors,
   handleChange,
   handleBlur,
@@ -24,22 +25,21 @@ const SignInForm = ({
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>Login</FormHeaderText>
+        <FormHeaderText>Verify yourself</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>Please, enter your phone number:</p>
+        <p>Please, enter the code. We send it to you via email</p>
         <FormInput
-          placeholder="email or phone number"
-          name="phoneNumber"
-          className="phoneNumber"
-          autoComplete="tel"
+          className="OTPinput"
+          name="loginCode"
+          maxLength="6"
           onChange={handleChange}
           onBlur={handleBlur}
-          value={values.phoneNumber}
+          value={values.loginCode}
         />
-        {touched.phoneNumber && errors.phoneNumber && (
-          <ErrorMessage>{errors.phoneNumber}</ErrorMessage>
+        {touched.loginCode && errors.loginCode && (
+          <ErrorMessage>{errors.loginCode}</ErrorMessage>
         )}
       </FormBody>
       <FormFooter>
@@ -48,26 +48,26 @@ const SignInForm = ({
         </Button>
         <Button
           continue
-          onClick={handleSubmit}
           type="submit"
-          disabled={!dirty || errors.phoneNumber}
+          onClick={handleSubmit}
+          disabled={!dirty || errors.loginCode}
         >
-          CONTINUE
+          PROCEED
         </Button>
       </FormFooter>
     </ModalForm>
   );
 };
 
-SignInForm.propTypes = {
+VerificationForm.propTypes = {
   errors: PropTypes.objectOf(PropTypes.string).isRequired,
   handleBlur: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
-  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   close: PropTypes.func.isRequired,
+  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
 };
 
-export default SignInForm;
+export default VerificationForm;

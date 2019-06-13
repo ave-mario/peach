@@ -27,6 +27,7 @@ exports[`SignIn form: component renders correctly 1`] = `
       Please, enter your phone number:
     </p>
     <input
+      autoComplete="tel"
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
       onBlur={[Function]}
@@ -83,6 +84,7 @@ exports[`SignIn form: component renders correctly 2`] = `
       Please, enter your phone number:
     </p>
     <input
+      autoComplete="tel"
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
       onBlur={[Function]}

@@ -4,6 +4,7 @@ import Actions from 'actions/sign_in.actions';
 
 const mapStateToProps = state => ({
   isAuthenticated: state.login.isAuthenticated,
+  isSended: state.login.isSended,
 });
 
 const mapDispatchToProps = dispatch => {

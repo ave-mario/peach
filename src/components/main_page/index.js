@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'shared/buttons.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
+import VerificationContainer from 'containers/validation.container';
 
 class Main extends Component {
   constructor() {
@@ -11,15 +12,18 @@ class Main extends Component {
     this.state = {
       isShowingSignIn: false,
       isShowingSignUp: false,
+      isShowingCodeInput: false,
     };
     this.toggleSignInForm = this.toggleSignInForm.bind(this);
     this.toggleSignUpForm = this.toggleSignUpForm.bind(this);
+    this.toggleCodeInput = this.toggleCodeInput.bind(this);
   }
 
   toggleSignInForm() {
     this.setState(prevState => ({
       isShowingSignIn: !prevState.isShowingSignIn,
       isShowingSignUp: false,
+      isShowingCodeInput: true,
     }));
   }
 
@@ -27,12 +31,21 @@ class Main extends Component {
     this.setState(prevState => ({
       isShowingSignUp: !prevState.isShowingSignUp,
       isShowingSignIn: false,
+      isShowingCodeInput: true,
     }));
   }
 
+  toggleCodeInput() {
+    const { isSended } = this.props;
+    if (isSended) {
+      this.setState({ isShowingCodeInput: true });
+    }
+    this.setState({ isShowingCodeInput: false });
+  }
+
   render() {
-    const { logout, isAuthenticated } = this.props;
-    const { isShowingSignIn, isShowingSignUp } = this.state;
+    const { logout, isAuthenticated, isSended } = this.props;
+    const { isShowingSignIn, isShowingSignUp, isShowingCodeInput } = this.state;
     return (
       <div>
         {!isAuthenticated ? (
@@ -44,20 +57,19 @@ class Main extends Component {
               SIGNUP
             </Button>
           </div>
-        ) : null}
-        {isAuthenticated ? (
+        ) : (
           <Button onClick={logout} className="logOutButton">
             LOGOUT
           </Button>
+        )}
+        {isShowingSignIn && !isSended && !isAuthenticated ? (
+          <SignInContainer close={this.toggleSignInForm} />
         ) : null}
-        {isShowingSignIn ? (
-          <SignInContainer
-            handleSubmit={this.submitForm}
-            close={this.toggleSignInForm}
-          />
-        ) : null}
-        {isShowingSignUp ? (
+        {isShowingSignUp && !isSended && !isAuthenticated ? (
           <SignUpContainer close={this.toggleSignUpForm} />
+        ) : null}
+        {isSended && isShowingCodeInput ? (
+          <VerificationContainer close={this.toggleCodeInput} />
         ) : null}
       </div>
     );
@@ -66,6 +78,7 @@ class Main extends Component {
 
 Main.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
+  isSended: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired,
 };
 
