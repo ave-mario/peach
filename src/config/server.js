@@ -1,6 +1,6 @@
 const serverPath = {
   address: 'http://localhost:',
-  port: '3001',
+  port: '6105',
   route: '/api',
 };
 

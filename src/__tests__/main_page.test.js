@@ -10,13 +10,13 @@ describe('Main Page:', () => {
     logout: jest.fn(),
   };
   it('correctly triggers event when button clicked', () => {
-    const MainPageComponent = shallow(<MainPage {...props} />);
+    const MainPageComponent = shallow(<MainPage {...props} />).dive();
     MainPageComponent.find('.signInButton').simulate('click');
     expect(MainPageComponent.state().isShowingSignIn).toEqual(true);
     expect(MainPageComponent.state().isShowingSignUp).toEqual(false);
   });
   it('correctly triggers event when button clicked', () => {
-    const MainPageComponent = shallow(<MainPage {...props} />);
+    const MainPageComponent = shallow(<MainPage {...props} />).dive();
     MainPageComponent.find('.signUpButton').simulate('click');
     expect(MainPageComponent.state().isShowingSignIn).toEqual(false);
     expect(MainPageComponent.state().isShowingSignUp).toEqual(true);

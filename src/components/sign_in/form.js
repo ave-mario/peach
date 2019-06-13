@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
@@ -10,6 +11,10 @@ import {
   FormInput,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
+import { addResourse } from 'config/localization';
+import localization from './localization.sign_in';
+
+addResourse('SignIn', localization);
 
 const SignInForm = ({
   errors,
@@ -20,17 +25,18 @@ const SignInForm = ({
   dirty,
   touched,
   close,
+  t,
 }) => {
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>Login</FormHeaderText>
+        <FormHeaderText>{t('lables.Login')}</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>Please, enter your phone number:</p>
+        <p>{t('lables.LoginEnterPhone')}</p>
         <FormInput
-          placeholder="email or phone number"
+          placeholder={t('lables.EnterEmailOrPhone')}
           name="phoneNumber"
           className="phoneNumber"
           autoComplete="tel"
@@ -44,7 +50,7 @@ const SignInForm = ({
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          CLOSE
+          {t('buttons.Close')}
         </Button>
         <Button
           continue
@@ -52,7 +58,7 @@ const SignInForm = ({
           type="submit"
           disabled={!dirty || errors.phoneNumber}
         >
-          CONTINUE
+          {t('buttons.Continue')}
         </Button>
       </FormFooter>
     </ModalForm>
@@ -68,6 +74,7 @@ SignInForm.propTypes = {
   dirty: PropTypes.bool.isRequired,
   touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   close: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default SignInForm;
+export default withTranslation('SignIn')(SignInForm);
