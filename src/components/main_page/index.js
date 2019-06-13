@@ -12,15 +12,18 @@ class Main extends Component {
     this.state = {
       isShowingSignIn: false,
       isShowingSignUp: false,
+      isShowingCodeInput: false,
     };
     this.toggleSignInForm = this.toggleSignInForm.bind(this);
     this.toggleSignUpForm = this.toggleSignUpForm.bind(this);
+    this.toggleCodeInput = this.toggleCodeInput.bind(this);
   }
 
   toggleSignInForm() {
     this.setState(prevState => ({
       isShowingSignIn: !prevState.isShowingSignIn,
       isShowingSignUp: false,
+      isShowingCodeInput: true,
     }));
   }
 
@@ -28,12 +31,21 @@ class Main extends Component {
     this.setState(prevState => ({
       isShowingSignUp: !prevState.isShowingSignUp,
       isShowingSignIn: false,
+      isShowingCodeInput: true,
     }));
+  }
+
+  toggleCodeInput() {
+    const { isSended } = this.props;
+    if (isSended) {
+      this.setState({ isShowingCodeInput: true });
+    }
+    this.setState({ isShowingCodeInput: false });
   }
 
   render() {
     const { logout, isAuthenticated, isSended } = this.props;
-    const { isShowingSignIn, isShowingSignUp } = this.state;
+    const { isShowingSignIn, isShowingSignUp, isShowingCodeInput } = this.state;
     return (
       <div>
         {!isAuthenticated ? (
@@ -51,15 +63,14 @@ class Main extends Component {
           </Button>
         )}
         {isShowingSignIn && !isSended && !isAuthenticated ? (
-          <SignInContainer
-            handleSubmit={this.submitForm}
-            close={this.toggleSignInForm}
-          />
+          <SignInContainer close={this.toggleSignInForm} />
         ) : null}
         {isShowingSignUp && !isSended && !isAuthenticated ? (
           <SignUpContainer close={this.toggleSignUpForm} />
         ) : null}
-        {isSended ? <VerificationContainer /> : null}
+        {isSended && isShowingCodeInput ? (
+          <VerificationContainer close={this.toggleCodeInput} />
+        ) : null}
       </div>
     );
   }
