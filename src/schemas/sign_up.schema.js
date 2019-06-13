@@ -1,21 +1,22 @@
 import { string, object } from 'yup';
+import i18n from 'config/localization';
+
+const translate = value => i18n.t(value);
 
 const validationSchema = object().shape({
   phoneNumber: string()
-    .required('Phone number is required')
-    .min(13, 'Phone number is incorrect')
-    .max(13, 'Phone number is incorrect'),
+    .required(translate('validation:required:phoneNumber'))
+    .min(13, translate('validation:incorrect:phoneNumber'))
+    .max(13, translate('validation:incorrect:phoneNumber')),
   email: string()
-    .required('Email is required')
-    .min(5, 'Enter > 4 characters')
-    .max(20, 'Enter < 20 characters')
-    .email('The email is incorrect'),
+    .required(translate('validation:incorrect:email'))
+    .email(translate('validation:incorrect:email')),
   name: string()
-    .required('Name is required')
+    .required(translate('validation:required:name'))
     .min(2, 'Enter > 1 character')
     .max(9, 'Enter < 9 characters'),
   surname: string()
-    .required('Surname is required')
+    .required(translate('validation:required:surname'))
     .min(2, 'Enter > 1 character')
     .max(9, 'Enter < 9 characters'),
 });

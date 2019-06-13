@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from 'locale/en';
 import ru from 'locale/ru';
+import validation from 'schemas/localization.schemas';
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -27,5 +28,7 @@ export const addResourse = (ns, resources) => {
     i18n.addResourceBundle(lng, ns, resources[lng]);
   });
 };
+
+addResourse('validation', validation);
 
 export default i18n;

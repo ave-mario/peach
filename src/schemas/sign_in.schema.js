@@ -1,10 +1,13 @@
 import { string, object } from 'yup';
+import i18n from 'config/localization';
+
+const translate = value => i18n.t(value);
 
 const validationSchema = object().shape({
   phoneNumber: string()
-    .required('Phone number is required')
-    .min(13, 'Phone number is incorrect')
-    .max(13, 'Phone number is incorrect'),
+    .required(translate('validation:required:phoneNumber'))
+    .min(13, translate('validation:incorrect:phoneNumber'))
+    .max(13, translate('validation:incorrect:phoneNumber')),
 });
 
 export default validationSchema;
