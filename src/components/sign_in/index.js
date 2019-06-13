@@ -11,10 +11,8 @@ const SignIn = props => (
     initialValues={{ phoneNumber: '' }}
     validationSchema={validationSchema}
     onSubmit={values => {
-      // TODO: redo loginCode after implementing at API
-      const loginCode = '123456';
       const { attemtLogin } = props;
-      attemtLogin(values.phoneNumber, loginCode);
+      attemtLogin(values.phoneNumber);
     }}
     render={formikProps => <SignInForm {...formikProps} close={props.close} />}
   />

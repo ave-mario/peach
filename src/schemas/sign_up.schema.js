@@ -13,12 +13,10 @@ const validationSchema = object().shape({
     .email(translate('validation:incorrect:email')),
   name: string()
     .required(translate('validation:required:name'))
-    .min(2, 'Enter > 1 character')
-    .max(9, 'Enter < 9 characters'),
+    .matches(/^[A-Za-z]+$/, translate('validation:incorrect:name')),
   surname: string()
     .required(translate('validation:required:surname'))
-    .min(2, 'Enter > 1 character')
-    .max(9, 'Enter < 9 characters'),
+    .matches(/^[A-Za-z]+$/, translate('validation:incorrect:name')),
 });
 
 export default validationSchema;

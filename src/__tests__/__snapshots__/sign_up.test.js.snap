@@ -27,6 +27,7 @@ exports[`SignUp from: component renders correctly 1`] = `
       Please, enter your phone number:
     </p>
     <input
+      autoComplete="email"
       className="email sc-bZQynM bGXiwX"
       name="email"
       onBlur={[Function]}
@@ -35,6 +36,7 @@ exports[`SignUp from: component renders correctly 1`] = `
       value=""
     />
     <input
+      autoComplete="tel"
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
       onBlur={[Function]}
@@ -43,6 +45,7 @@ exports[`SignUp from: component renders correctly 1`] = `
       value=""
     />
     <input
+      autoComplete="given-name"
       className="name sc-bZQynM bGXiwX"
       name="name"
       onBlur={[Function]}
@@ -51,6 +54,7 @@ exports[`SignUp from: component renders correctly 1`] = `
       value=""
     />
     <input
+      autoComplete="family-name"
       className="surname sc-bZQynM bGXiwX"
       name="surname"
       onBlur={[Function]}
@@ -107,6 +111,7 @@ exports[`SignUp from: component renders correctly 2`] = `
       Please, enter your phone number:
     </p>
     <input
+      autoComplete="email"
       className="email sc-bZQynM bGXiwX"
       name="email"
       onBlur={[Function]}
@@ -115,6 +120,7 @@ exports[`SignUp from: component renders correctly 2`] = `
       value=""
     />
     <input
+      autoComplete="tel"
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
       onBlur={[Function]}
@@ -123,6 +129,7 @@ exports[`SignUp from: component renders correctly 2`] = `
       value=""
     />
     <input
+      autoComplete="given-name"
       className="name sc-bZQynM bGXiwX"
       name="name"
       onBlur={[Function]}
@@ -131,6 +138,7 @@ exports[`SignUp from: component renders correctly 2`] = `
       value=""
     />
     <input
+      autoComplete="family-name"
       className="surname sc-bZQynM bGXiwX"
       name="surname"
       onBlur={[Function]}

@@ -23,7 +23,7 @@ const SignUpForm = ({
   handleSubmit,
   values,
   dirty,
-  isSubmitting,
+  touched,
   close,
   t,
 }) => {
@@ -37,46 +37,50 @@ const SignUpForm = ({
         <p>{t('lables.text')}</p>
         <FormInput
           placeholder={t('lables.Email')}
+          autoComplete="email"
           name="email"
           className="email"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.email}
         />
-        {errors.email && (
+        {touched.email && errors.email && (
           <ErrorMessage className="error">{errors.email}</ErrorMessage>
         )}
         <FormInput
           placeholder={t('lables.PhoneNumber')}
           name="phoneNumber"
+          autoComplete="tel"
           className="phoneNumber"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.phoneNumber}
         />
-        {errors.phoneNumber && (
+        {touched.phoneNumber && errors.phoneNumber && (
           <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
         )}
         <FormInput
           placeholder={t('lables.Name')}
           name="name"
+          autoComplete="given-name"
           className="name"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.name}
         />
-        {errors.name && (
+        {touched.name && errors.name && (
           <ErrorMessage className="error">{errors.name}</ErrorMessage>
         )}
         <FormInput
           placeholder={t('lables.Surname')}
           className="surname"
           name="surname"
+          autoComplete="family-name"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.surname}
         />
-        {errors.surname && (
+        {touched.surname && errors.surname && (
           <ErrorMessage className="error">{errors.surname}</ErrorMessage>
         )}
       </FormBody>
@@ -90,7 +94,6 @@ const SignUpForm = ({
           type="submit"
           disabled={
             !dirty ||
-            isSubmitting ||
             errors.phoneNumber ||
             errors.email ||
             errors.name ||
@@ -111,7 +114,7 @@ SignUpForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
-  isSubmitting: PropTypes.bool.isRequired,
+  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   close: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
 };

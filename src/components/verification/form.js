@@ -1,5 +1,4 @@
 import React from 'react';
-import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
@@ -10,13 +9,10 @@ import {
   FormHeaderText,
   FormInput,
 } from 'shared/modal_form.css';
+import './input.css';
 import ErrorMessage from 'shared/error.css';
-import { addResourse } from 'config/localization';
-import localization from './localization.sign_in';
 
-addResourse('SignIn', localization);
-
-const SignInForm = ({
+const VerificationForm = ({
   errors,
   handleChange,
   handleBlur,
@@ -25,56 +21,53 @@ const SignInForm = ({
   dirty,
   touched,
   close,
-  t,
 }) => {
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>{t('lables.Login')}</FormHeaderText>
+        <FormHeaderText>Verify yourself</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>{t('lables.LoginEnterPhone')}</p>
+        <p>Please, enter the code. We send it to you via email</p>
         <FormInput
-          placeholder={t('lables.EnterEmailOrPhone')}
-          name="phoneNumber"
-          className="phoneNumber"
-          autoComplete="tel"
+          className="OTPinput"
+          name="loginCode"
+          maxLength="6"
           onChange={handleChange}
           onBlur={handleBlur}
-          value={values.phoneNumber}
+          value={values.loginCode}
         />
-        {touched.phoneNumber && errors.phoneNumber && (
-          <ErrorMessage>{errors.phoneNumber}</ErrorMessage>
+        {touched.loginCode && errors.loginCode && (
+          <ErrorMessage>{errors.loginCode}</ErrorMessage>
         )}
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          {t('buttons.Close')}
+          CLOSE
         </Button>
         <Button
           continue
-          onClick={handleSubmit}
           type="submit"
-          disabled={!dirty || errors.phoneNumber}
+          onClick={handleSubmit}
+          disabled={!dirty || errors.loginCode}
         >
-          {t('buttons.Continue')}
+          PROCEED
         </Button>
       </FormFooter>
     </ModalForm>
   );
 };
 
-SignInForm.propTypes = {
+VerificationForm.propTypes = {
   errors: PropTypes.objectOf(PropTypes.string).isRequired,
   handleBlur: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
-  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   close: PropTypes.func.isRequired,
-  t: PropTypes.func.isRequired,
+  touched: PropTypes.objectOf(PropTypes.bool).isRequired,
 };
 
-export default withTranslation('SignIn')(SignInForm);
+export default VerificationForm;

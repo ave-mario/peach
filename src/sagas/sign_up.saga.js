@@ -11,7 +11,8 @@ export default function* watchSignUp() {
       yield call(axios.post, '/clients', payload);
       yield put(push('/'));
     } catch (error) {
-      // TODO: error message
+      const errorMessage = error.response ? error.response.data : error.message;
+      yield put(signUpActions.Creators.loginFailure(errorMessage));
     }
   });
 }
