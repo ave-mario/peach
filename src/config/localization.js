@@ -10,8 +10,9 @@ i18n.use(initReactI18next).init({
   },
   fallbackLng: 'en',
   debug: true,
-  ns: ['errors', 'lables', 'buttons'],
-  defaultNS: 'lables',
+  ns: ['translations'],
+  defaultNS: 'translations',
+  keySeparator: '.',
   interpolation: {
     escapeValue: false,
     formatSeparator: ',',
@@ -20,5 +21,11 @@ i18n.use(initReactI18next).init({
     wait: true,
   },
 });
+
+export const addResourse = (ns, resources) => {
+  ['ru', 'en'].forEach(lng => {
+    i18n.addResourceBundle(lng, ns, resources[lng]);
+  });
+};
 
 export default i18n;

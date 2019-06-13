@@ -10,7 +10,7 @@ exports[`SignIn form: component renders correctly 1`] = `
     <h3
       className="sc-ifAKCX bXZmPy"
     >
-      lables:Login
+      Login
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
@@ -24,14 +24,14 @@ exports[`SignIn form: component renders correctly 1`] = `
     onSubmit={[Function]}
   >
     <p>
-      lables:LoginEnterPhone
+      Please, enter your phone number:
     </p>
     <input
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder="lables:EnterEmailOrPhone"
+      placeholder="email or phone number"
       value=""
     />
   </form>
@@ -42,7 +42,7 @@ exports[`SignIn form: component renders correctly 1`] = `
       className="sc-bdVaJa fTgRSZ"
       onClick={[MockFunction]}
     >
-      buttons:Close
+      CLOSE
     </button>
     <button
       className="sc-bdVaJa iiSudm"
@@ -50,7 +50,7 @@ exports[`SignIn form: component renders correctly 1`] = `
       onClick={[Function]}
       type="submit"
     >
-      buttons:Continue
+      SEND CODE
     </button>
   </div>
 </div>
@@ -66,7 +66,7 @@ exports[`SignIn form: component renders correctly 2`] = `
     <h3
       className="sc-ifAKCX bXZmPy"
     >
-      lables:Login
+      Login
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
@@ -80,14 +80,14 @@ exports[`SignIn form: component renders correctly 2`] = `
     onSubmit={[Function]}
   >
     <p>
-      lables:LoginEnterPhone
+      Please, enter your phone number:
     </p>
     <input
       className="phoneNumber sc-bZQynM bGXiwX"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder="lables:EnterEmailOrPhone"
+      placeholder="email or phone number"
       value=""
     />
   </form>
@@ -98,7 +98,7 @@ exports[`SignIn form: component renders correctly 2`] = `
       className="sc-bdVaJa fTgRSZ"
       onClick={[MockFunction]}
     >
-      buttons:Close
+      CLOSE
     </button>
     <button
       className="sc-bdVaJa iiSudm"
@@ -106,7 +106,7 @@ exports[`SignIn form: component renders correctly 2`] = `
       onClick={[Function]}
       type="submit"
     >
-      buttons:Continue
+      SEND CODE
     </button>
   </div>
 </div>

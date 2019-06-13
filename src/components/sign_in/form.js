@@ -11,6 +11,10 @@ import {
   FormInput,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
+import { addResourse } from 'config/localization';
+import localization from './localization.sign_in';
+
+addResourse('SignIn', localization);
 
 const SignInForm = ({
   errors,
@@ -26,13 +30,13 @@ const SignInForm = ({
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>{t('lables:Login')}</FormHeaderText>
+        <FormHeaderText>{t('lables.Login')}</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>{t('lables:LoginEnterPhone')}</p>
+        <p>{t('lables.LoginEnterPhone')}</p>
         <FormInput
-          placeholder={t('lables:EnterEmailOrPhone')}
+          placeholder={t('lables.EnterEmailOrPhone')}
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.phoneNumber}
@@ -45,7 +49,7 @@ const SignInForm = ({
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          {t('buttons:Close')}
+          {t('buttons.Close')}
         </Button>
         <Button
           continue
@@ -53,7 +57,7 @@ const SignInForm = ({
           type="submit"
           disabled={!dirty || isSubmitting || errors.phoneNumber}
         >
-          {t('buttons:Continue')}
+          {t('buttons.Continue')}
         </Button>
       </FormFooter>
     </ModalForm>
@@ -72,4 +76,4 @@ SignInForm.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation()(SignInForm);
+export default withTranslation('SignIn')(SignInForm);

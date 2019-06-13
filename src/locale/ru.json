@@ -1,21 +1,7 @@
 {
-  "buttons": {
-    "Login": "ВХОД",
+  "translations": {
+    "Login": "ВОЙТИ",
     "Logout": "ВЫЙТИ",
-    "SignUp": "РЕГИСТРАЦИЯ",
-    "Close": "ЗАКРЫТЬ",
-    "Continue": "ОТПРАВИТЬ КОД",
-    "ContinueSignup": "ПРОДОЛЖИТь"
-  },
-  "lables": {
-    "Login": "Вход",
-    "Signup": "Регистрация",
-    "LoginEnterPhone": "Пожалуйста, введите ваш мобильный телефон:",
-    "SignUp": "Пожалуйста, введите вашу информацию:",
-    "Email": "Email",
-    "PhoneNumber": "Мобильный телефон",
-    "Name": "Имя",
-    "Surname": "Фамилия",
-    "EnterEmailOrPhone": "email или телефон"
+    "SignUp": "РЕГИСТРАЦИЯ"
   }
 }

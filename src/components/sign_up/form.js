@@ -11,6 +11,10 @@ import {
   FormInput,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
+import { addResourse } from 'config/localization';
+import localization from './localization.sing_up';
+
+addResourse('SignUp', localization);
 
 const SignUpForm = ({
   errors,
@@ -26,13 +30,13 @@ const SignUpForm = ({
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>{t('lables:Signup')}</FormHeaderText>
+        <FormHeaderText>{t('lables.title')}</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>{t('lables:SignUp')}</p>
+        <p>{t('lables.text')}</p>
         <FormInput
-          placeholder={t('lables:Email')}
+          placeholder={t('lables.Email')}
           name="email"
           className="email"
           onChange={handleChange}
@@ -43,7 +47,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.email}</ErrorMessage>
         )}
         <FormInput
-          placeholder={t('lables:PhoneNumber')}
+          placeholder={t('lables.PhoneNumber')}
           name="phoneNumber"
           className="phoneNumber"
           onChange={handleChange}
@@ -54,7 +58,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
         )}
         <FormInput
-          placeholder={t('lables:Name')}
+          placeholder={t('lables.Name')}
           name="name"
           className="name"
           onChange={handleChange}
@@ -65,7 +69,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.name}</ErrorMessage>
         )}
         <FormInput
-          placeholder={t('lables:Surname')}
+          placeholder={t('lables.Surname')}
           className="surname"
           name="surname"
           onChange={handleChange}
@@ -78,7 +82,7 @@ const SignUpForm = ({
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          {t('buttons:Close')}
+          {t('buttons.Close')}
         </Button>
         <Button
           continue
@@ -93,7 +97,7 @@ const SignUpForm = ({
             errors.surname
           }
         >
-          {t('buttons:ContinueSignup')}
+          {t('buttons.Continue')}
         </Button>
       </FormFooter>
     </ModalForm>
@@ -112,4 +116,4 @@ SignUpForm.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation()(SignUpForm);
+export default withTranslation('SignUp')(SignUpForm);
