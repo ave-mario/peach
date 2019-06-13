@@ -14,7 +14,9 @@ const OneTimePassword = props => (
       const { attemtLogin, phoneNumber } = props;
       attemtLogin(phoneNumber, values.loginCode);
     }}
-    render={formikProps => <VerificationForm {...formikProps} />}
+    render={formikProps => (
+      <VerificationForm {...formikProps} close={props.close} />
+    )}
   />
 );
 

@@ -20,12 +20,13 @@ const VerificationForm = ({
   values,
   dirty,
   touched,
+  close,
 }) => {
   return (
     <ModalForm>
       <FormHeader>
         <FormHeaderText>Verify yourself</FormHeaderText>
-        <CrossButton>×</CrossButton>
+        <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
         <p>Please, enter the code. We send it to you via email</p>
@@ -42,7 +43,9 @@ const VerificationForm = ({
         )}
       </FormBody>
       <FormFooter>
-        <Button cancel>CLOSE</Button>
+        <Button cancel onClick={close}>
+          CLOSE
+        </Button>
         <Button
           continue
           type="submit"
@@ -63,6 +66,7 @@ VerificationForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   values: PropTypes.objectOf(PropTypes.string).isRequired,
   dirty: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
   touched: PropTypes.objectOf(PropTypes.bool).isRequired,
 };
 

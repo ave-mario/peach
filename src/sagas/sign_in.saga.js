@@ -16,7 +16,8 @@ export default function* watchSignIn() {
       yield take(loginActions.Types.LOGOUT);
       yield call(clearToken);
     } catch (error) {
-      // TODO: error message
+      const errorMessage = error.response ? error.response.data : error.message;
+      yield put(loginActions.Creators.loginFailure(errorMessage));
     }
   });
 }
