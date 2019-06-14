@@ -2,7 +2,9 @@ import { connect } from 'react-redux';
 import SignIn from 'components/sign_in';
 import Actions from 'actions/verification.actons';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = state => ({
+  error: state.login.error,
+});
 
 const mapDispatchToProps = dispatch => {
   return {
