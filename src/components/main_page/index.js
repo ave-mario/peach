@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button } from 'shared/buttons.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
+import { addResourse } from 'config/localization';
 import VerificationContainer from 'containers/validation.container';
 import {
   SnackBar,
   SnackBarImage,
   SnackBarDescription,
 } from 'shared/snackbar.css';
+import localization from './localization.main';
 
+addResourse('Main', localization);
 class Main extends Component {
   constructor() {
     super();
@@ -74,7 +78,7 @@ class Main extends Component {
   }
 
   render() {
-    const { logout, isAuthenticated, isSended, error } = this.props;
+    const { logout, isAuthenticated, isSended, error, t } = this.props;
     const {
       isShowingSignIn,
       isShowingSignUp,
@@ -86,15 +90,15 @@ class Main extends Component {
         {!isAuthenticated ? (
           <div>
             <Button onClick={this.toggleSignInForm} className="signInButton">
-              LOGIN
+              {t('Login')}
             </Button>
             <Button onClick={this.toggleSignUpForm} className="signUpButton">
-              SIGNUP
+              {t('SignUp')}
             </Button>
           </div>
         ) : (
           <Button onClick={logout} className="logOutButton">
-            LOGOUT
+            {t('Logout')}
           </Button>
         )}
         {isShowingSignIn && !isSended && !isAuthenticated ? (
@@ -121,6 +125,7 @@ Main.propTypes = {
   logout: PropTypes.func.isRequired,
   isSended: PropTypes.bool.isRequired,
   error: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default Main;
+export default withTranslation('Main')(Main);

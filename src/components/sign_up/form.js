@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
@@ -10,6 +11,10 @@ import {
   FormInput,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
+import { addResourse } from 'config/localization';
+import localization from './localization.sing_up';
+
+addResourse('SignUp', localization);
 
 const SignUpForm = ({
   errors,
@@ -20,17 +25,18 @@ const SignUpForm = ({
   dirty,
   touched,
   close,
+  t,
 }) => {
   return (
     <ModalForm>
       <FormHeader>
-        <FormHeaderText>SignUp</FormHeaderText>
+        <FormHeaderText>{t('lables.title')}</FormHeaderText>
         <CrossButton onClick={close}>×</CrossButton>
       </FormHeader>
       <FormBody onSubmit={handleSubmit} className="formBody">
-        <p>Please, enter your information:</p>
+        <p>{t('lables.text')}</p>
         <FormInput
-          placeholder="Email"
+          placeholder={t('lables.Email')}
           autoComplete="email"
           name="email"
           className="email"
@@ -42,7 +48,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.email}</ErrorMessage>
         )}
         <FormInput
-          placeholder="Phone number"
+          placeholder={t('lables.PhoneNumber')}
           name="phoneNumber"
           autoComplete="tel"
           className="phoneNumber"
@@ -54,7 +60,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
         )}
         <FormInput
-          placeholder="First Name"
+          placeholder={t('lables.Name')}
           name="name"
           autoComplete="given-name"
           className="name"
@@ -66,7 +72,7 @@ const SignUpForm = ({
           <ErrorMessage className="error">{errors.name}</ErrorMessage>
         )}
         <FormInput
-          placeholder="Last Name"
+          placeholder={t('lables.Surname')}
           className="surname"
           name="surname"
           autoComplete="family-name"
@@ -80,7 +86,7 @@ const SignUpForm = ({
       </FormBody>
       <FormFooter>
         <Button cancel onClick={close}>
-          CLOSE
+          {t('buttons.Close')}
         </Button>
         <Button
           continue
@@ -94,7 +100,7 @@ const SignUpForm = ({
             errors.surname
           }
         >
-          CONTINUE
+          {t('buttons.Continue')}
         </Button>
       </FormFooter>
     </ModalForm>
@@ -110,6 +116,7 @@ SignUpForm.propTypes = {
   dirty: PropTypes.bool.isRequired,
   touched: PropTypes.objectOf(PropTypes.bool).isRequired,
   close: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
-export default SignUpForm;
+export default withTranslation('SignUp')(SignUpForm);
