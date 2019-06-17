@@ -28,7 +28,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     </p>
     <input
       autoComplete="email"
-      className="email sc-bZQynM bGXiwX"
+      className="email sc-bZQynM gUxayA"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -37,7 +37,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="tel"
-      className="phoneNumber sc-bZQynM bGXiwX"
+      className="phoneNumber sc-bZQynM gUxayA"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -46,7 +46,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="given-name"
-      className="name sc-bZQynM bGXiwX"
+      className="name sc-bZQynM gUxayA"
       name="name"
       onBlur={[Function]}
       onChange={[Function]}
@@ -55,7 +55,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="family-name"
-      className="surname sc-bZQynM bGXiwX"
+      className="surname sc-bZQynM gUxayA"
       name="surname"
       onBlur={[Function]}
       onChange={[Function]}
@@ -112,7 +112,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     </p>
     <input
       autoComplete="email"
-      className="email sc-bZQynM bGXiwX"
+      className="email sc-bZQynM gUxayA"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -121,7 +121,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="tel"
-      className="phoneNumber sc-bZQynM bGXiwX"
+      className="phoneNumber sc-bZQynM gUxayA"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -130,7 +130,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="given-name"
-      className="name sc-bZQynM bGXiwX"
+      className="name sc-bZQynM gUxayA"
       name="name"
       onBlur={[Function]}
       onChange={[Function]}
@@ -139,7 +139,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="family-name"
-      className="surname sc-bZQynM bGXiwX"
+      className="surname sc-bZQynM gUxayA"
       name="surname"
       onBlur={[Function]}
       onChange={[Function]}

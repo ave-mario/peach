@@ -9,8 +9,8 @@ import {
   FormHeaderText,
   FormInput,
 } from 'shared/modal_form.css';
-import './input.css';
 import ErrorMessage from 'shared/error.css';
+import ResendCodeLink from 'shared/links.css';
 
 const VerificationForm = ({
   errors,
@@ -31,7 +31,7 @@ const VerificationForm = ({
       <FormBody onSubmit={handleSubmit} className="formBody">
         <p>Please, enter the code. We send it to you via email</p>
         <FormInput
-          className="OTPinput"
+          code
           name="loginCode"
           maxLength="6"
           onChange={handleChange}
@@ -42,6 +42,7 @@ const VerificationForm = ({
           <ErrorMessage>{errors.loginCode}</ErrorMessage>
         )}
       </FormBody>
+      <ResendCodeLink>Send code again</ResendCodeLink>
       <FormFooter>
         <Button cancel onClick={close}>
           CLOSE

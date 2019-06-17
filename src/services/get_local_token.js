@@ -1,4 +1,4 @@
-import loginActions from 'actions/sign_in.actions';
+import signInActions from 'actions/sign_in.actions';
 
 const AUTH_TOKEN_KEY = 'auth token';
 const USER_KEY = 'user';
@@ -7,7 +7,7 @@ export const initializePreviousToken = store => {
   const token = localStorage.getItem(AUTH_TOKEN_KEY);
   const user = JSON.parse(localStorage.getItem(USER_KEY));
   if (token)
-    store.dispatch(loginActions.Creators.loginSuccess({ token, user }));
+    store.dispatch(signInActions.Creators.signInSuccess({ token, user }));
 };
 
 export const storeToken = response => {

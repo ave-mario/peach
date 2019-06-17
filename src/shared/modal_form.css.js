@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const ModalForm = styled.div`
   background: white;
@@ -41,6 +41,14 @@ const FormInput = styled.input`
   width: 80%;
   border-radius: 16px;
   border-color: black;
+  ${props =>
+    props.code &&
+    css`
+      font-size: 20px;
+      padding-left: 20px;
+      letter-spacing: 20px;
+      text-align: center;
+    `}
 `;
 
 const FormFooter = styled.div`
