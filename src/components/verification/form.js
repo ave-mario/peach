@@ -9,8 +9,8 @@ import {
   FormHeaderText,
   FormInput,
 } from 'shared/modal_form.css';
-import './input.css';
 import ErrorMessage from 'shared/error.css';
+import ResendCodeLink from 'shared/links.css';
 
 const VerificationForm = ({
   errors,
@@ -21,7 +21,14 @@ const VerificationForm = ({
   dirty,
   touched,
   close,
+  attemtGetCode,
+  phoneNumber,
 }) => {
+  function handleClickResend(e) {
+    e.preventDefault();
+    attemtGetCode(phoneNumber);
+  }
+
   return (
     <ModalForm>
       <FormHeader>
@@ -31,7 +38,7 @@ const VerificationForm = ({
       <FormBody onSubmit={handleSubmit} className="formBody">
         <p>Please, enter the code. We send it to you via email</p>
         <FormInput
-          className="OTPinput"
+          code
           name="loginCode"
           maxLength="6"
           onChange={handleChange}
@@ -42,6 +49,9 @@ const VerificationForm = ({
           <ErrorMessage>{errors.loginCode}</ErrorMessage>
         )}
       </FormBody>
+      <ResendCodeLink onClick={handleClickResend}>
+        send code again
+      </ResendCodeLink>
       <FormFooter>
         <Button cancel onClick={close}>
           CLOSE
@@ -68,6 +78,8 @@ VerificationForm.propTypes = {
   dirty: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
   touched: PropTypes.objectOf(PropTypes.bool).isRequired,
+  attemtGetCode: PropTypes.func.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
 };
 
 export default VerificationForm;

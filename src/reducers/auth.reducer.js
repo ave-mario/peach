@@ -39,6 +39,7 @@ export const codeFailure = (state, action) => {
 export const signInRequest = state => {
   return {
     ...state,
+    error: null,
   };
 };
 
@@ -69,6 +70,7 @@ export const signUpRequest = (state, action) => {
   return {
     ...state,
     isSended: true,
+    error: null,
     data: {
       phoneNumber: action.payload.phoneNumber,
     },
