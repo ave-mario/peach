@@ -21,7 +21,14 @@ const VerificationForm = ({
   dirty,
   touched,
   close,
+  attemtGetCode,
+  phoneNumber,
 }) => {
+  function handleClickResend(e) {
+    e.preventDefault();
+    attemtGetCode(phoneNumber);
+  }
+
   return (
     <ModalForm>
       <FormHeader>
@@ -42,7 +49,9 @@ const VerificationForm = ({
           <ErrorMessage>{errors.loginCode}</ErrorMessage>
         )}
       </FormBody>
-      <ResendCodeLink>Send code again</ResendCodeLink>
+      <ResendCodeLink onClick={handleClickResend}>
+        send code again
+      </ResendCodeLink>
       <FormFooter>
         <Button cancel onClick={close}>
           CLOSE
@@ -69,6 +78,8 @@ VerificationForm.propTypes = {
   dirty: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
   touched: PropTypes.objectOf(PropTypes.bool).isRequired,
+  attemtGetCode: PropTypes.func.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
 };
 
 export default VerificationForm;
