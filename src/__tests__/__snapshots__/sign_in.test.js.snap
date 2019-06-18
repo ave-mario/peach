@@ -10,7 +10,7 @@ exports[`SignIn form: component renders correctly 1`] = `
     <h3
       className="sc-EHOje gNeOrj"
     >
-      Sing in
+      Singin
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
@@ -67,7 +67,7 @@ exports[`SignIn form: component renders correctly 2`] = `
     <h3
       className="sc-EHOje gNeOrj"
     >
-      Sing in
+      Singin
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
