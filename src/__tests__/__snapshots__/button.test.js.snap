@@ -7,6 +7,7 @@ exports[`Buttons: component rednders correctly 1`] = `
   font-weight: bold;
   outline: none;
   padding: 10px;
+  position: relative;
 }
 
 .c0:disabled {

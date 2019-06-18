@@ -14,7 +14,7 @@ const SnackBar = styled.div`
   z-index: 1;
   left: 0;
   right: 0;
-  bottom: 30px;
+  bottom: 20px;
   font-size: 17px;
   white-space: nowrap;
   ${props =>
@@ -30,7 +30,7 @@ const SnackBar = styled.div`
           opacity: 0;
         }
         to {
-          bottom: 30px;
+          bottom: 20px;
           opacity: 1;
         }
       }
@@ -64,11 +64,11 @@ const SnackBar = styled.div`
 
       @keyframes fadeout {
         from {
-          bottom: 30px;
+          bottom: 20px;
           opacity: 1;
         }
         to {
-          bottom: 60px;
+          bottom: 0;
           opacity: 0;
         }
       }

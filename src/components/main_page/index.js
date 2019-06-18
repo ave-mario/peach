@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Button } from 'shared/buttons.css';
+import { Button, ButtonsGroup } from 'shared/buttons.css';
+import {
+  Header,
+  HeaderImage,
+  HeaderHotelName,
+  HeaderHotelNameSecondary,
+} from 'shared/header.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
 import { addResourse } from 'config/localization';
@@ -11,6 +17,8 @@ import {
   SnackBarImage,
   SnackBarDescription,
 } from 'shared/snackbar.css';
+import hotelImageMask from 'utils/hotel_mask.png';
+import hotelImage from 'utils/hotel.jpg';
 import localization from './localization.main';
 
 addResourse('Main', localization);
@@ -88,18 +96,28 @@ class Main extends Component {
     return (
       <div>
         {!isAuthenticated ? (
-          <div>
-            <Button onClick={this.toggleSignInForm} className="signInButton">
+          <ButtonsGroup>
+            <Button
+              main
+              onClick={this.toggleSignInForm}
+              className="signInButton"
+            >
               {t('Login')}
             </Button>
-            <Button onClick={this.toggleSignUpForm} className="signUpButton">
+            <Button
+              main
+              onClick={this.toggleSignUpForm}
+              className="signUpButton"
+            >
               {t('SignUp')}
             </Button>
-          </div>
+          </ButtonsGroup>
         ) : (
-          <Button onClick={logout} className="logOutButton">
-            {t('Logout')}
-          </Button>
+          <ButtonsGroup>
+            <Button main onClick={logout} className="logOutButton">
+              {t('Logout')}
+            </Button>
+          </ButtonsGroup>
         )}
         {isShowingSignIn && !isSended && !isAuthenticated ? (
           <SignInContainer close={this.toggleSignInForm} />
@@ -111,10 +129,30 @@ class Main extends Component {
           <VerificationContainer close={this.toggleCodeInput} />
         ) : null}
         {!show ? this.toggleSnackBar() : null}
-        <SnackBar show={show}>
-          <SnackBarImage></SnackBarImage>
-          <SnackBarDescription>{error}</SnackBarDescription>
-        </SnackBar>
+
+        <Header>
+          <HeaderHotelName>
+            Ave <HeaderHotelNameSecondary>hotel</HeaderHotelNameSecondary> Mario
+          </HeaderHotelName>
+          <HeaderImage src={hotelImageMask} />
+        </Header>
+        <div></div>
+        <main style={{ position: 'relative' }}>
+          <img
+            src={hotelImage}
+            alt="someImage"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <img
+            src={hotelImage}
+            alt="someImage"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <SnackBar show={show}>
+            <SnackBarImage></SnackBarImage>
+            <SnackBarDescription>{error}</SnackBarDescription>
+          </SnackBar>
+        </main>
       </div>
     );
   }

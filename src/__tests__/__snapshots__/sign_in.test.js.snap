@@ -2,13 +2,13 @@
 
 exports[`SignIn form: component renders correctly 1`] = `
 <div
-  className="sc-htpNat gIsAAs"
+  className="sc-bxivhb jNYKZY"
 >
   <div
-    className="sc-bxivhb gPVRgU"
+    className="sc-ifAKCX dtegpF"
   >
     <h3
-      className="sc-ifAKCX bXZmPy"
+      className="sc-EHOje gNeOrj"
     >
       Sing in
     </h3>
@@ -20,7 +20,7 @@ exports[`SignIn form: component renders correctly 1`] = `
     </span>
   </div>
   <form
-    className="formBody sc-EHOje fFPbRn"
+    className="formBody sc-bZQynM dHNxet"
     onSubmit={[Function]}
   >
     <p>
@@ -28,7 +28,7 @@ exports[`SignIn form: component renders correctly 1`] = `
     </p>
     <input
       autoComplete="tel"
-      className="phoneNumber sc-bZQynM gUxayA"
+      className="phoneNumber sc-gzVnrw dYffOc"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -37,16 +37,16 @@ exports[`SignIn form: component renders correctly 1`] = `
     />
   </form>
   <div
-    className="sc-gzVnrw dphOmL"
+    className="sc-htoDjs VjGDS"
   >
     <button
-      className="sc-bdVaJa fTgRSZ"
+      className="sc-bdVaJa cCdFnh"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa iiSudm"
+      className="sc-bdVaJa ieykXP"
       disabled={true}
       onClick={[Function]}
       type="submit"
@@ -59,13 +59,13 @@ exports[`SignIn form: component renders correctly 1`] = `
 
 exports[`SignIn form: component renders correctly 2`] = `
 <div
-  className="sc-htpNat gIsAAs"
+  className="sc-bxivhb jNYKZY"
 >
   <div
-    className="sc-bxivhb gPVRgU"
+    className="sc-ifAKCX dtegpF"
   >
     <h3
-      className="sc-ifAKCX bXZmPy"
+      className="sc-EHOje gNeOrj"
     >
       Sing in
     </h3>
@@ -77,7 +77,7 @@ exports[`SignIn form: component renders correctly 2`] = `
     </span>
   </div>
   <form
-    className="formBody sc-EHOje fFPbRn"
+    className="formBody sc-bZQynM dHNxet"
     onSubmit={[Function]}
   >
     <p>
@@ -85,7 +85,7 @@ exports[`SignIn form: component renders correctly 2`] = `
     </p>
     <input
       autoComplete="tel"
-      className="phoneNumber sc-bZQynM gUxayA"
+      className="phoneNumber sc-gzVnrw dYffOc"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -94,16 +94,16 @@ exports[`SignIn form: component renders correctly 2`] = `
     />
   </form>
   <div
-    className="sc-gzVnrw dphOmL"
+    className="sc-htoDjs VjGDS"
   >
     <button
-      className="sc-bdVaJa fTgRSZ"
+      className="sc-bdVaJa cCdFnh"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa iiSudm"
+      className="sc-bdVaJa ieykXP"
       disabled={true}
       onClick={[Function]}
       type="submit"

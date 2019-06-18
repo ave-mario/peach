@@ -1,12 +1,12 @@
 export default {
   ru: {
-    Login: 'ВОЙТИ',
-    Logout: 'ВЫЙТИ',
-    SignUp: 'РЕГИСТРАЦИЯ',
+    Login: 'Войти',
+    Logout: 'Выйти',
+    SignUp: 'Регистрация',
   },
   en: {
-    Login: 'SIGN IN',
-    Logout: 'SIGN OUT',
-    SignUp: 'SIGN UP',
+    Login: 'Sign in',
+    Logout: 'Logout',
+    SignUp: 'Sign up',
   },
 };
