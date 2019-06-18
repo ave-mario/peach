@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Button } from 'shared/buttons.css';
+import { Button, Wrapper as ButtonsWrapper } from 'shared/buttons.css';
+import {
+  Wrapper,
+  Image,
+  HotelNameLabel,
+  HotelNameSecondaryLabel,
+} from 'shared/header.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
 import { addResourse } from 'config/localization';
 import VerificationContainer from 'containers/validation.container';
 import {
-  SnackBar,
-  SnackBarImage,
-  SnackBarDescription,
+  Wrapper as ToastWrapper,
+  Image as ToastImage,
+  DescriptionWrapper,
 } from 'shared/snackbar.css';
+import hotelImageMask from 'utils/hotel_mask.png';
+import hotelImage from 'utils/hotel.jpg';
 import localization from './localization.main';
 
 addResourse('Main', localization);
@@ -88,18 +96,28 @@ class Main extends Component {
     return (
       <div>
         {!isAuthenticated ? (
-          <div>
-            <Button onClick={this.toggleSignInForm} className="signInButton">
+          <ButtonsWrapper>
+            <Button
+              main
+              onClick={this.toggleSignInForm}
+              className="signInButton"
+            >
               {t('Login')}
             </Button>
-            <Button onClick={this.toggleSignUpForm} className="signUpButton">
+            <Button
+              main
+              onClick={this.toggleSignUpForm}
+              className="signUpButton"
+            >
               {t('SignUp')}
             </Button>
-          </div>
+          </ButtonsWrapper>
         ) : (
-          <Button onClick={logout} className="logOutButton">
-            {t('Logout')}
-          </Button>
+          <ButtonsWrapper>
+            <Button main onClick={logout} className="logOutButton">
+              {t('Logout')}
+            </Button>
+          </ButtonsWrapper>
         )}
         {isShowingSignIn && !isSended && !isAuthenticated ? (
           <SignInContainer close={this.toggleSignInForm} />
@@ -111,10 +129,30 @@ class Main extends Component {
           <VerificationContainer close={this.toggleCodeInput} />
         ) : null}
         {!show ? this.toggleSnackBar() : null}
-        <SnackBar show={show}>
-          <SnackBarImage></SnackBarImage>
-          <SnackBarDescription>{error}</SnackBarDescription>
-        </SnackBar>
+
+        <Wrapper>
+          <HotelNameLabel>
+            Ave <HotelNameSecondaryLabel>hotel</HotelNameSecondaryLabel> Mario
+          </HotelNameLabel>
+          <Image src={hotelImageMask} />
+        </Wrapper>
+        <div></div>
+        <main style={{ position: 'relative' }}>
+          <img
+            src={hotelImage}
+            alt="someImage"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <img
+            src={hotelImage}
+            alt="someImage"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <ToastWrapper show={show}>
+            <ToastImage></ToastImage>
+            <DescriptionWrapper>{error}</DescriptionWrapper>
+          </ToastWrapper>
+        </main>
       </div>
     );
   }

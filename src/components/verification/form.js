@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
-  ModalForm,
-  FormHeader,
-  FormBody,
-  FormFooter,
-  FormHeaderText,
-  FormInput,
+  Wrapper,
+  Header,
+  Form,
+  Footer,
+  HeaderLabel,
+  Input,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
 import ResendCodeLink from 'shared/links.css';
@@ -30,14 +30,14 @@ const VerificationForm = ({
   }
 
   return (
-    <ModalForm>
-      <FormHeader>
-        <FormHeaderText>Verify yourself</FormHeaderText>
+    <Wrapper>
+      <Header>
+        <HeaderLabel>Verify yourself</HeaderLabel>
         <CrossButton onClick={close}>×</CrossButton>
-      </FormHeader>
-      <FormBody onSubmit={handleSubmit} className="formBody">
+      </Header>
+      <Form onSubmit={handleSubmit} className="formBody">
         <p>Please, enter the code. We send it to you via email</p>
-        <FormInput
+        <Input
           code
           name="loginCode"
           maxLength="6"
@@ -48,11 +48,11 @@ const VerificationForm = ({
         {touched.loginCode && errors.loginCode && (
           <ErrorMessage>{errors.loginCode}</ErrorMessage>
         )}
-      </FormBody>
+      </Form>
       <ResendCodeLink onClick={handleClickResend}>
         send code again
       </ResendCodeLink>
-      <FormFooter>
+      <Footer>
         <Button cancel onClick={close}>
           CLOSE
         </Button>
@@ -64,8 +64,8 @@ const VerificationForm = ({
         >
           PROCEED
         </Button>
-      </FormFooter>
-    </ModalForm>
+      </Footer>
+    </Wrapper>
   );
 };
 

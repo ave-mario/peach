@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import errorIcon from 'utils/error_icon.png';
 
-const SnackBar = styled.div`
+const Wrapper = styled.div`
   visibility: hidden;
   max-width: 50px;
   height: 50px;
@@ -14,7 +14,7 @@ const SnackBar = styled.div`
   z-index: 1;
   left: 0;
   right: 0;
-  bottom: 30px;
+  bottom: 20px;
   font-size: 17px;
   white-space: nowrap;
   ${props =>
@@ -30,7 +30,7 @@ const SnackBar = styled.div`
           opacity: 0;
         }
         to {
-          bottom: 30px;
+          bottom: 20px;
           opacity: 1;
         }
       }
@@ -64,17 +64,17 @@ const SnackBar = styled.div`
 
       @keyframes fadeout {
         from {
-          bottom: 30px;
+          bottom: 20px;
           opacity: 1;
         }
         to {
-          bottom: 60px;
+          bottom: 0;
           opacity: 0;
         }
       }
     `}
 `;
-const SnackBarImage = styled.div`
+const Image = styled.div`
   width: 50px;
   height: 50px;
   float: left;
@@ -88,11 +88,11 @@ const SnackBarImage = styled.div`
   color: #fff;
 `;
 
-const SnackBarDescription = styled.div`
+const DescriptionWrapper = styled.div`
   color: #fff;
   padding: 16px;
   overflow: hidden;
   white-space: nowrap;
 `;
 
-export { SnackBar, SnackBarDescription, SnackBarImage };
+export { Wrapper, DescriptionWrapper, Image };

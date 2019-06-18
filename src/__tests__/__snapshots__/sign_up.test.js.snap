@@ -2,15 +2,15 @@
 
 exports[`SignUp from: component renders correctly 1`] = `
 <div
-  className="sc-htpNat gIsAAs"
+  className="sc-bxivhb jNYKZY"
 >
   <div
-    className="sc-bxivhb gPVRgU"
+    className="sc-ifAKCX dtegpF"
   >
     <h3
-      className="sc-ifAKCX bXZmPy"
+      className="sc-EHOje gNeOrj"
     >
-      Sign up for HOTEL
+      Signup
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
@@ -20,7 +20,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     </span>
   </div>
   <form
-    className="formBody sc-EHOje fFPbRn"
+    className="formBody sc-bZQynM dHNxet"
     onSubmit={[Function]}
   >
     <p>
@@ -28,7 +28,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     </p>
     <input
       autoComplete="email"
-      className="email sc-bZQynM gUxayA"
+      className="email sc-gzVnrw dYffOc"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -37,7 +37,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="tel"
-      className="phoneNumber sc-bZQynM gUxayA"
+      className="phoneNumber sc-gzVnrw dYffOc"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -46,7 +46,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="given-name"
-      className="name sc-bZQynM gUxayA"
+      className="name sc-gzVnrw dYffOc"
       name="name"
       onBlur={[Function]}
       onChange={[Function]}
@@ -55,7 +55,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="family-name"
-      className="surname sc-bZQynM gUxayA"
+      className="surname sc-gzVnrw dYffOc"
       name="surname"
       onBlur={[Function]}
       onChange={[Function]}
@@ -64,16 +64,16 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
   </form>
   <div
-    className="sc-gzVnrw dphOmL"
+    className="sc-htoDjs VjGDS"
   >
     <button
-      className="sc-bdVaJa fTgRSZ"
+      className="sc-bdVaJa cCdFnh"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa iiSudm"
+      className="sc-bdVaJa ieykXP"
       disabled={true}
       onClick={[Function]}
       type="submit"
@@ -86,15 +86,15 @@ exports[`SignUp from: component renders correctly 1`] = `
 
 exports[`SignUp from: component renders correctly 2`] = `
 <div
-  className="sc-htpNat gIsAAs"
+  className="sc-bxivhb jNYKZY"
 >
   <div
-    className="sc-bxivhb gPVRgU"
+    className="sc-ifAKCX dtegpF"
   >
     <h3
-      className="sc-ifAKCX bXZmPy"
+      className="sc-EHOje gNeOrj"
     >
-      Sign up for HOTEL
+      Signup
     </h3>
     <span
       className="sc-bwzfXH goCgBH"
@@ -104,7 +104,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     </span>
   </div>
   <form
-    className="formBody sc-EHOje fFPbRn"
+    className="formBody sc-bZQynM dHNxet"
     onSubmit={[Function]}
   >
     <p>
@@ -112,7 +112,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     </p>
     <input
       autoComplete="email"
-      className="email sc-bZQynM gUxayA"
+      className="email sc-gzVnrw dYffOc"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -121,7 +121,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="tel"
-      className="phoneNumber sc-bZQynM gUxayA"
+      className="phoneNumber sc-gzVnrw dYffOc"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -130,7 +130,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="given-name"
-      className="name sc-bZQynM gUxayA"
+      className="name sc-gzVnrw dYffOc"
       name="name"
       onBlur={[Function]}
       onChange={[Function]}
@@ -139,7 +139,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="family-name"
-      className="surname sc-bZQynM gUxayA"
+      className="surname sc-gzVnrw dYffOc"
       name="surname"
       onBlur={[Function]}
       onChange={[Function]}
@@ -148,16 +148,16 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
   </form>
   <div
-    className="sc-gzVnrw dphOmL"
+    className="sc-htoDjs VjGDS"
   >
     <button
-      className="sc-bdVaJa fTgRSZ"
+      className="sc-bdVaJa cCdFnh"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa iiSudm"
+      className="sc-bdVaJa ieykXP"
       disabled={true}
       onClick={[Function]}
       type="submit"
