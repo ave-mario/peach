@@ -98,7 +98,7 @@ const CrossButton = styled.span`
   }
 `;
 
-const ButtonsGroup = styled.div`
+const Wrapper = styled.div`
   position: absolute;
   z-index: 10;
   right: 0;
@@ -106,4 +106,4 @@ const ButtonsGroup = styled.div`
   align-items: baseline;
 `;
 
-export { Button, CrossButton, ButtonsGroup };
+export { Button, CrossButton, Wrapper };

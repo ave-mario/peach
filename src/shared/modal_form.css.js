@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const ModalForm = styled.div`
+const Wrapper = styled.div`
   background: white;
   border: 1px solid #d0cccc;
   border-radius: 20px;
@@ -14,7 +14,7 @@ const ModalForm = styled.div`
   left: calc(50% - 150px);
 `;
 
-const FormHeader = styled.div`
+const Header = styled.div`
   background: #263238;
   border-radius: 20px 20px 0 0;
   height: 40px;
@@ -23,19 +23,19 @@ const FormHeader = styled.div`
   text-align: right;
 `;
 
-const FormHeaderText = styled.h3`
+const HeaderLabel = styled.h3`
   color: white;
   float: left;
   margin: 0;
   padding: 0;
 `;
 
-const FormBody = styled.form`
+const Form = styled.form`
   padding: 10px 15px;
   text-align: center;
 `;
 
-const FormInput = styled.input`
+const Input = styled.input`
   padding: 8px 16px;
   margin: 2px;
   height: 24px;
@@ -53,17 +53,10 @@ const FormInput = styled.input`
     `}
 `;
 
-const FormFooter = styled.div`
+const Footer = styled.div`
   border-radius: 0 0 20px 20px;
   height: 35px;
   padding: 15px;
 `;
 
-export {
-  ModalForm,
-  FormHeader,
-  FormBody,
-  FormFooter,
-  FormHeaderText,
-  FormInput,
-};
+export { Wrapper, Header, Form, Footer, HeaderLabel, Input };

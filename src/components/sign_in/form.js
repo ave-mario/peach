@@ -3,12 +3,12 @@ import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
-  ModalForm,
-  FormHeader,
-  FormBody,
-  FormFooter,
-  FormHeaderText,
-  FormInput,
+  Wrapper,
+  Header,
+  Form,
+  Footer,
+  HeaderLabel,
+  Input,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
 import { addResourse } from 'config/localization';
@@ -28,14 +28,14 @@ const SignInForm = ({
   t,
 }) => {
   return (
-    <ModalForm>
-      <FormHeader>
-        <FormHeaderText>{t('lables.Login')}</FormHeaderText>
+    <Wrapper>
+      <Header>
+        <HeaderLabel>{t('lables.Login')}</HeaderLabel>
         <CrossButton onClick={close}>×</CrossButton>
-      </FormHeader>
-      <FormBody onSubmit={handleSubmit} className="formBody">
+      </Header>
+      <Form onSubmit={handleSubmit} className="formBody">
         <p>{t('lables.LoginEnterPhone')}</p>
-        <FormInput
+        <Input
           placeholder={t('lables.EnterEmailOrPhone')}
           name="phoneNumber"
           className="phoneNumber"
@@ -47,8 +47,8 @@ const SignInForm = ({
         {touched.phoneNumber && errors.phoneNumber && (
           <ErrorMessage>{errors.phoneNumber}</ErrorMessage>
         )}
-      </FormBody>
-      <FormFooter>
+      </Form>
+      <Footer>
         <Button cancel onClick={close}>
           {t('buttons.Close')}
         </Button>
@@ -60,8 +60,8 @@ const SignInForm = ({
         >
           {t('buttons.Continue')}
         </Button>
-      </FormFooter>
-    </ModalForm>
+      </Footer>
+    </Wrapper>
   );
 };
 

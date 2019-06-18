@@ -3,12 +3,12 @@ import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Button, CrossButton } from 'shared/buttons.css';
 import {
-  ModalForm,
-  FormHeader,
-  FormBody,
-  FormFooter,
-  FormHeaderText,
-  FormInput,
+  Wrapper,
+  Header,
+  Form,
+  Footer,
+  HeaderLabel,
+  Input,
 } from 'shared/modal_form.css';
 import ErrorMessage from 'shared/error.css';
 import { addResourse } from 'config/localization';
@@ -28,14 +28,14 @@ const SignUpForm = ({
   t,
 }) => {
   return (
-    <ModalForm>
-      <FormHeader>
-        <FormHeaderText>{t('lables.title')}</FormHeaderText>
+    <Wrapper>
+      <Header>
+        <HeaderLabel>{t('lables.title')}</HeaderLabel>
         <CrossButton onClick={close}>×</CrossButton>
-      </FormHeader>
-      <FormBody onSubmit={handleSubmit} className="formBody">
+      </Header>
+      <Form onSubmit={handleSubmit} className="formBody">
         <p>{t('lables.text')}</p>
-        <FormInput
+        <Input
           placeholder={t('lables.Email')}
           autoComplete="email"
           name="email"
@@ -47,7 +47,7 @@ const SignUpForm = ({
         {touched.email && errors.email && (
           <ErrorMessage className="error">{errors.email}</ErrorMessage>
         )}
-        <FormInput
+        <Input
           placeholder={t('lables.PhoneNumber')}
           name="phoneNumber"
           autoComplete="tel"
@@ -59,7 +59,7 @@ const SignUpForm = ({
         {touched.phoneNumber && errors.phoneNumber && (
           <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
         )}
-        <FormInput
+        <Input
           placeholder={t('lables.Name')}
           name="name"
           autoComplete="given-name"
@@ -71,7 +71,7 @@ const SignUpForm = ({
         {touched.name && errors.name && (
           <ErrorMessage className="error">{errors.name}</ErrorMessage>
         )}
-        <FormInput
+        <Input
           placeholder={t('lables.Surname')}
           className="surname"
           name="surname"
@@ -83,8 +83,8 @@ const SignUpForm = ({
         {touched.surname && errors.surname && (
           <ErrorMessage className="error">{errors.surname}</ErrorMessage>
         )}
-      </FormBody>
-      <FormFooter>
+      </Form>
+      <Footer>
         <Button cancel onClick={close}>
           {t('buttons.Close')}
         </Button>
@@ -102,8 +102,8 @@ const SignUpForm = ({
         >
           {t('buttons.Continue')}
         </Button>
-      </FormFooter>
-    </ModalForm>
+      </Footer>
+    </Wrapper>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import hotelImage from 'utils/hotel.jpg';
 
-const Header = styled.header`
+const Wrapper = styled.header`
   background: url(${hotelImage}) no-repeat;
   position: relative;
   padding-top: 56.25%;
@@ -9,14 +9,14 @@ const Header = styled.header`
   font-family: 'Sucrose Bold Two';
 `;
 
-const HeaderImage = styled.img`
+const Image = styled.img`
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
 `;
 
-const HeaderHotelName = styled.h1`
+const HotelNameLabel = styled.h1`
   position: fixed;
   top: 2rem;
   right: 2rem;
@@ -27,9 +27,9 @@ const HeaderHotelName = styled.h1`
   text-align: center;
 `;
 
-const HeaderHotelNameSecondary = styled.span`
+const HotelNameSecondaryLabel = styled.span`
   display: block;
   font-size: 4.75vw;
 `;
 
-export { Header, HeaderImage, HeaderHotelName, HeaderHotelNameSecondary };
+export { Wrapper, Image, HotelNameLabel, HotelNameSecondaryLabel };

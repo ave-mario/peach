@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Button, ButtonsGroup } from 'shared/buttons.css';
+import { Button, Wrapper as ButtonsWrapper } from 'shared/buttons.css';
 import {
-  Header,
-  HeaderImage,
-  HeaderHotelName,
-  HeaderHotelNameSecondary,
+  Wrapper,
+  Image,
+  HotelNameLabel,
+  HotelNameSecondaryLabel,
 } from 'shared/header.css';
 import SignInContainer from 'containers/sign_in.container';
 import SignUpContainer from 'containers/sign_up.container';
 import { addResourse } from 'config/localization';
 import VerificationContainer from 'containers/validation.container';
 import {
-  SnackBar,
-  SnackBarImage,
-  SnackBarDescription,
+  Wrapper as ToastWrapper,
+  Image as ToastImage,
+  DescriptionWrapper,
 } from 'shared/snackbar.css';
 import hotelImageMask from 'utils/hotel_mask.png';
 import hotelImage from 'utils/hotel.jpg';
@@ -96,7 +96,7 @@ class Main extends Component {
     return (
       <div>
         {!isAuthenticated ? (
-          <ButtonsGroup>
+          <ButtonsWrapper>
             <Button
               main
               onClick={this.toggleSignInForm}
@@ -111,13 +111,13 @@ class Main extends Component {
             >
               {t('SignUp')}
             </Button>
-          </ButtonsGroup>
+          </ButtonsWrapper>
         ) : (
-          <ButtonsGroup>
+          <ButtonsWrapper>
             <Button main onClick={logout} className="logOutButton">
               {t('Logout')}
             </Button>
-          </ButtonsGroup>
+          </ButtonsWrapper>
         )}
         {isShowingSignIn && !isSended && !isAuthenticated ? (
           <SignInContainer close={this.toggleSignInForm} />
@@ -130,12 +130,12 @@ class Main extends Component {
         ) : null}
         {!show ? this.toggleSnackBar() : null}
 
-        <Header>
-          <HeaderHotelName>
-            Ave <HeaderHotelNameSecondary>hotel</HeaderHotelNameSecondary> Mario
-          </HeaderHotelName>
-          <HeaderImage src={hotelImageMask} />
-        </Header>
+        <Wrapper>
+          <HotelNameLabel>
+            Ave <HotelNameSecondaryLabel>hotel</HotelNameSecondaryLabel> Mario
+          </HotelNameLabel>
+          <Image src={hotelImageMask} />
+        </Wrapper>
         <div></div>
         <main style={{ position: 'relative' }}>
           <img
@@ -148,10 +148,10 @@ class Main extends Component {
             alt="someImage"
             style={{ width: '100%', height: 'auto' }}
           />
-          <SnackBar show={show}>
-            <SnackBarImage></SnackBarImage>
-            <SnackBarDescription>{error}</SnackBarDescription>
-          </SnackBar>
+          <ToastWrapper show={show}>
+            <ToastImage></ToastImage>
+            <DescriptionWrapper>{error}</DescriptionWrapper>
+          </ToastWrapper>
         </main>
       </div>
     );

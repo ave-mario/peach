@@ -15,7 +15,7 @@ export default {
   },
   en: {
     lables: {
-      title: 'Sign up for HOTEL',
+      title: 'Signup',
       text: 'Please, enter your phone number:',
       Email: 'Email',
       PhoneNumber: 'Phone number',
