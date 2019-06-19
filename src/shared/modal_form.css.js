@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   transition: all 0.8s;
   width: 300px;
   left: calc(50% - 150px);
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.8);
 `;
 
 const Header = styled.div`

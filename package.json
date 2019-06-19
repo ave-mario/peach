@@ -77,7 +77,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/serviceWorker.js"
+      "!src/serviceWorker.js",
+      "!src/index.js",
+      "!src/config/*",
+      "!src/store/*"
     ]
   },
   "husky": {

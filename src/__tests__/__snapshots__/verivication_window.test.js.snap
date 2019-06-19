@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OTP input: component renders correctly 1`] = `
+.c8 {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  color: red;
+  float: left;
+}
+
+.c8:disabled {
+  opacity: 0.4;
+}
+
+.c9 {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  background: linear-gradient( to right, #159957 0%, #155799 51%, #159957 100% );
+  background-size: 200%;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  border-radius: 5px;
+  color: white;
+  float: right;
+}
+
+.c9:disabled {
+  opacity: 0.4;
+}
+
+.c9:hover {
+  background-position: right center;
+}
+
+.c3 {
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 34px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin: 0;
+}
+
+.c3:hover {
+  color: #ce2d45;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.c0 {
+  background: white;
+  border: 1px solid #d0cccc;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 2;
+  top: 20%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  margin: 100px auto 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  width: 300px;
+  left: calc(50% - 150px);
+  box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
+}
+
+.c1 {
+  background: #263238;
+  border-radius: 20px 20px 0 0;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 20px;
+  text-align: right;
+}
+
+.c2 {
+  color: white;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.c4 {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.c5 {
+  padding: 8px 16px;
+  margin: 2px;
+  height: 24px;
+  outline: none;
+  width: 80%;
+  border-radius: 16px;
+  border-color: black;
+  font-size: 20px;
+  padding-left: 20px;
+  -webkit-letter-spacing: 20px;
+  -moz-letter-spacing: 20px;
+  -ms-letter-spacing: 20px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+.c7 {
+  border-radius: 0 0 20px 20px;
+  height: 35px;
+  padding: 15px;
+}
+
+.c6 {
+  font-size: 14px;
+  color: #113d84;
+  display: inline-block;
+  position: relative;
+}
+
+.c6:hover {
+  cursor: pointer;
+}
+
+.c6:after {
+  background-color: #113d84;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c6:hover:after,
+.c6:focus:after {
+  width: 100%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Verify yourself
+    </h3>
+    <span
+      className="c3"
+      onClick={[MockFunction]}
+    >
+      ×
+    </span>
+  </div>
+  <form
+    className="formBody c4"
+    onSubmit={[Function]}
+  >
+    <p>
+      Please, enter the code. We send it to you via email
+    </p>
+    <input
+      className="c5"
+      maxLength="6"
+      name="loginCode"
+      onBlur={[Function]}
+      onChange={[Function]}
+      value=""
+    />
+  </form>
+  <a
+    className="c6"
+    onClick={[Function]}
+  >
+    send code again
+  </a>
+  <div
+    className="c7"
+  >
+    <button
+      className="c8"
+      onClick={[MockFunction]}
+    >
+      CLOSE
+    </button>
+    <button
+      className="c9"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      PROCEED
+    </button>
+  </div>
+</div>
+`;
