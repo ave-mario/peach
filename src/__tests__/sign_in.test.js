@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SignIn from 'components/sign_in';
+import 'jest-styled-components';
 
 describe('SignIn form:', () => {
   Enzyme.configure({ adapter: new Adapter() });

@@ -1,26 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignUp from: component renders correctly 1`] = `
+.c7 {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  color: red;
+  float: left;
+}
+
+.c7:disabled {
+  opacity: 0.4;
+}
+
+.c8 {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  background: linear-gradient( to right, #159957 0%, #155799 51%, #159957 100% );
+  background-size: 200%;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  border-radius: 5px;
+  color: white;
+  float: right;
+}
+
+.c8:disabled {
+  opacity: 0.4;
+}
+
+.c8:hover {
+  background-position: right center;
+}
+
+.c3 {
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 34px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin: 0;
+}
+
+.c3:hover {
+  color: #ce2d45;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.c0 {
+  background: white;
+  border: 1px solid #d0cccc;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 2;
+  top: 20%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  margin: 100px auto 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  width: 300px;
+  left: calc(50% - 150px);
+  box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
+}
+
+.c1 {
+  background: #263238;
+  border-radius: 20px 20px 0 0;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 20px;
+  text-align: right;
+}
+
+.c2 {
+  color: white;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.c4 {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.c5 {
+  padding: 8px 16px;
+  margin: 2px;
+  height: 24px;
+  outline: none;
+  width: 80%;
+  border-radius: 16px;
+  border-color: black;
+}
+
+.c6 {
+  border-radius: 0 0 20px 20px;
+  height: 35px;
+  padding: 15px;
+}
+
 <div
-  className="sc-bxivhb jNYKZY"
+  className="c0"
 >
   <div
-    className="sc-ifAKCX dtegpF"
+    className="c1"
   >
     <h3
-      className="sc-EHOje gNeOrj"
+      className="c2"
     >
       Signup
     </h3>
     <span
-      className="sc-bwzfXH goCgBH"
+      className="c3"
       onClick={[MockFunction]}
     >
       ×
     </span>
   </div>
   <form
-    className="formBody sc-bZQynM dHNxet"
+    className="formBody c4"
     onSubmit={[Function]}
   >
     <p>
@@ -28,7 +141,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     </p>
     <input
       autoComplete="email"
-      className="email sc-gzVnrw dYffOc"
+      className="email c5"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -37,7 +150,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="tel"
-      className="phoneNumber sc-gzVnrw dYffOc"
+      className="phoneNumber c5"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -46,7 +159,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="given-name"
-      className="name sc-gzVnrw dYffOc"
+      className="name c5"
       name="name"
       onBlur={[Function]}
       onChange={[Function]}
@@ -55,7 +168,7 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
     <input
       autoComplete="family-name"
-      className="surname sc-gzVnrw dYffOc"
+      className="surname c5"
       name="surname"
       onBlur={[Function]}
       onChange={[Function]}
@@ -64,16 +177,16 @@ exports[`SignUp from: component renders correctly 1`] = `
     />
   </form>
   <div
-    className="sc-htoDjs VjGDS"
+    className="c6"
   >
     <button
-      className="sc-bdVaJa cCdFnh"
+      className="c7"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa ieykXP"
+      className="c8"
       disabled={true}
       onClick={[Function]}
       type="submit"
@@ -85,26 +198,139 @@ exports[`SignUp from: component renders correctly 1`] = `
 `;
 
 exports[`SignUp from: component renders correctly 2`] = `
+.c7 {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  color: red;
+  float: left;
+}
+
+.c7:disabled {
+  opacity: 0.4;
+}
+
+.c8 {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  background: linear-gradient( to right, #159957 0%, #155799 51%, #159957 100% );
+  background-size: 200%;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  border-radius: 5px;
+  color: white;
+  float: right;
+}
+
+.c8:disabled {
+  opacity: 0.4;
+}
+
+.c8:hover {
+  background-position: right center;
+}
+
+.c3 {
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 34px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin: 0;
+}
+
+.c3:hover {
+  color: #ce2d45;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.c0 {
+  background: white;
+  border: 1px solid #d0cccc;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 2;
+  top: 20%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  margin: 100px auto 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  width: 300px;
+  left: calc(50% - 150px);
+  box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
+}
+
+.c1 {
+  background: #263238;
+  border-radius: 20px 20px 0 0;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 20px;
+  text-align: right;
+}
+
+.c2 {
+  color: white;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.c4 {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.c5 {
+  padding: 8px 16px;
+  margin: 2px;
+  height: 24px;
+  outline: none;
+  width: 80%;
+  border-radius: 16px;
+  border-color: black;
+}
+
+.c6 {
+  border-radius: 0 0 20px 20px;
+  height: 35px;
+  padding: 15px;
+}
+
 <div
-  className="sc-bxivhb jNYKZY"
+  className="c0"
 >
   <div
-    className="sc-ifAKCX dtegpF"
+    className="c1"
   >
     <h3
-      className="sc-EHOje gNeOrj"
+      className="c2"
     >
       Signup
     </h3>
     <span
-      className="sc-bwzfXH goCgBH"
+      className="c3"
       onClick={[MockFunction]}
     >
       ×
     </span>
   </div>
   <form
-    className="formBody sc-bZQynM dHNxet"
+    className="formBody c4"
     onSubmit={[Function]}
   >
     <p>
@@ -112,7 +338,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     </p>
     <input
       autoComplete="email"
-      className="email sc-gzVnrw dYffOc"
+      className="email c5"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -121,7 +347,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="tel"
-      className="phoneNumber sc-gzVnrw dYffOc"
+      className="phoneNumber c5"
       name="phoneNumber"
       onBlur={[Function]}
       onChange={[Function]}
@@ -130,7 +356,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="given-name"
-      className="name sc-gzVnrw dYffOc"
+      className="name c5"
       name="name"
       onBlur={[Function]}
       onChange={[Function]}
@@ -139,7 +365,7 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
     <input
       autoComplete="family-name"
-      className="surname sc-gzVnrw dYffOc"
+      className="surname c5"
       name="surname"
       onBlur={[Function]}
       onChange={[Function]}
@@ -148,16 +374,16 @@ exports[`SignUp from: component renders correctly 2`] = `
     />
   </form>
   <div
-    className="sc-htoDjs VjGDS"
+    className="c6"
   >
     <button
-      className="sc-bdVaJa cCdFnh"
+      className="c7"
       onClick={[MockFunction]}
     >
       CLOSE
     </button>
     <button
-      className="sc-bdVaJa ieykXP"
+      className="c8"
       disabled={true}
       onClick={[Function]}
       type="submit"
