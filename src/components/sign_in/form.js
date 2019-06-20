@@ -8,9 +8,13 @@ import {
   Form,
   Footer,
   HeaderLabel,
-  Input,
 } from 'shared/modal_form.css';
-import ErrorMessage from 'shared/error.css';
+import {
+  Wrapper as InputWrapper,
+  Label,
+  Border,
+  Input,
+} from 'shared/input.css';
 import { addResourse } from 'config/localization';
 import localization from './localization.sign_in';
 
@@ -35,23 +39,26 @@ const SignInForm = ({
       </Header>
       <Form onSubmit={handleSubmit} className="formBody">
         <p>{t('lables.LoginEnterPhone')}</p>
-        <Input
-          placeholder={t('lables.EnterEmailOrPhone')}
-          name="phoneNumber"
-          className="phoneNumber"
-          autoComplete="tel"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.phoneNumber}
-        />
-        {touched.phoneNumber && errors.phoneNumber && (
-          <ErrorMessage>{errors.phoneNumber}</ErrorMessage>
-        )}
+        <InputWrapper>
+          <Input
+            type="text"
+            required
+            name="phoneNumber"
+            className="phoneNumber"
+            autoComplete="tel"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.phoneNumber}
+          />
+          <Border></Border>
+          <Label>
+            {errors.phoneNumber && touched.phoneNumber
+              ? errors.phoneNumber
+              : 'Phone Number'}
+          </Label>
+        </InputWrapper>
       </Form>
       <Footer>
-        <Button cancel onClick={close}>
-          {t('buttons.Close')}
-        </Button>
         <Button
           continue
           onClick={handleSubmit}

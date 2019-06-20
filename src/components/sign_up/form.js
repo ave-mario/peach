@@ -8,9 +8,13 @@ import {
   Form,
   Footer,
   HeaderLabel,
-  Input,
 } from 'shared/modal_form.css';
-import ErrorMessage from 'shared/error.css';
+import {
+  Wrapper as InputWrapper,
+  Label,
+  Border,
+  Input,
+} from 'shared/input.css';
 import { addResourse } from 'config/localization';
 import localization from './localization.sing_up';
 
@@ -35,59 +39,72 @@ const SignUpForm = ({
       </Header>
       <Form onSubmit={handleSubmit} className="formBody">
         <p>{t('lables.text')}</p>
-        <Input
-          placeholder={t('lables.Email')}
-          autoComplete="email"
-          name="email"
-          className="email"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.email}
-        />
-        {touched.email && errors.email && (
-          <ErrorMessage className="error">{errors.email}</ErrorMessage>
-        )}
-        <Input
-          placeholder={t('lables.PhoneNumber')}
-          name="phoneNumber"
-          autoComplete="tel"
-          className="phoneNumber"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.phoneNumber}
-        />
-        {touched.phoneNumber && errors.phoneNumber && (
-          <ErrorMessage className="error">{errors.phoneNumber}</ErrorMessage>
-        )}
-        <Input
-          placeholder={t('lables.Name')}
-          name="name"
-          autoComplete="given-name"
-          className="name"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.name}
-        />
-        {touched.name && errors.name && (
-          <ErrorMessage className="error">{errors.name}</ErrorMessage>
-        )}
-        <Input
-          placeholder={t('lables.Surname')}
-          className="surname"
-          name="surname"
-          autoComplete="family-name"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.surname}
-        />
-        {touched.surname && errors.surname && (
-          <ErrorMessage className="error">{errors.surname}</ErrorMessage>
-        )}
+        <InputWrapper>
+          <Input
+            type="text"
+            required
+            name="email"
+            className="email"
+            autoComplete="tel"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          />
+          <Border></Border>
+          <Label>
+            {errors.email && touched.email ? errors.email : 'Email'}
+          </Label>
+        </InputWrapper>
+        <InputWrapper>
+          <Input
+            type="text"
+            required
+            name="phoneNumber"
+            className="phoneNumber"
+            autoComplete="tel"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.phoneNumber}
+          />
+          <Border></Border>
+          <Label>
+            {errors.phoneNumber && touched.phoneNumber
+              ? errors.phoneNumber
+              : 'Phone Number'}
+          </Label>
+        </InputWrapper>
+        <InputWrapper>
+          <Input
+            type="text"
+            required
+            name="name"
+            className="name"
+            autoComplete="given-name"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.name}
+          />
+          <Border></Border>
+          <Label>{errors.name && touched.name ? errors.name : 'Name'}</Label>
+        </InputWrapper>
+        <InputWrapper>
+          <Input
+            type="text"
+            required
+            name="surname"
+            className="surname"
+            autoComplete="family-name"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.surname}
+          />
+          <Border></Border>
+          <Label>
+            {errors.surname && touched.surname ? errors.surname : 'Surname'}
+          </Label>
+        </InputWrapper>
       </Form>
       <Footer>
-        <Button cancel onClick={close}>
-          {t('buttons.Close')}
-        </Button>
         <Button
           continue
           onClick={handleSubmit}

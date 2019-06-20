@@ -8,7 +8,7 @@ exports[`OTP input: component renders correctly 1`] = `
   outline: none;
   padding: 10px;
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
   color: red;
   float: left;
 }
@@ -62,11 +62,10 @@ exports[`OTP input: component renders correctly 1`] = `
 }
 
 .c0 {
-  background: white;
-  border: 1px solid #d0cccc;
-  border-radius: 20px;
+  background: rgba(0,0,0,0.8);
   position: fixed;
   z-index: 2;
+  color: white;
   top: 20%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
   margin: 100px auto 0;
@@ -77,8 +76,31 @@ exports[`OTP input: component renders correctly 1`] = `
   box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
 }
 
+.c0::after,
+.c0::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 2px;
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: #fff;
+}
+
+.c0::after {
+  bottom: 0;
+  right: 0;
+}
+
+.c0::before {
+  top: 0;
+  left: 0;
+}
+
 .c1 {
-  background: #263238;
   border-radius: 20px 20px 0 0;
   height: 40px;
   line-height: 40px;
@@ -100,12 +122,13 @@ exports[`OTP input: component renders correctly 1`] = `
 
 .c5 {
   padding: 8px 16px;
+  color: #fff;
+  background: transparent;
   margin: 2px;
   height: 24px;
   outline: none;
   width: 80%;
   border-radius: 16px;
-  border-color: black;
   font-size: 20px;
   padding-left: 20px;
   -webkit-letter-spacing: 20px;
@@ -117,6 +140,14 @@ exports[`OTP input: component renders correctly 1`] = `
 
 .c7 {
   border-radius: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 35px;
   padding: 15px;
 }

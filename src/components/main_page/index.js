@@ -162,8 +162,12 @@ Main.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   logout: PropTypes.func.isRequired,
   isSended: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
+  error: PropTypes.string,
   t: PropTypes.func.isRequired,
+};
+
+Main.defaultProps = {
+  error: null,
 };
 
 export default withTranslation('Main')(Main);

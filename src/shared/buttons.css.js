@@ -59,7 +59,7 @@ const Button = styled.button`
   ${props =>
     props.cancel &&
     css`
-      background-color: #fff;
+      background-color: transparent;
       color: red;
       float: left;
     `}
