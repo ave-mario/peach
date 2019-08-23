@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignIn form: component renders correctly 1`] = `
-.c7 {
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  outline: none;
-  padding: 10px;
-  position: relative;
-  background-color: #fff;
-  color: red;
-  float: left;
-}
-
-.c7:disabled {
-  opacity: 0.4;
-}
-
-.c8 {
+.c10 {
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -33,11 +17,11 @@ exports[`SignIn form: component renders correctly 1`] = `
   float: right;
 }
 
-.c8:disabled {
+.c10:disabled {
   opacity: 0.4;
 }
 
-.c8:hover {
+.c10:hover {
   background-position: right center;
 }
 
@@ -62,11 +46,10 @@ exports[`SignIn form: component renders correctly 1`] = `
 }
 
 .c0 {
-  background: white;
-  border: 1px solid #d0cccc;
-  border-radius: 20px;
+  background: rgba(0,0,0,0.8);
   position: fixed;
   z-index: 2;
+  color: white;
   top: 20%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
   margin: 100px auto 0;
@@ -77,8 +60,31 @@ exports[`SignIn form: component renders correctly 1`] = `
   box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
 }
 
+.c0::after,
+.c0::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 2px;
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: #fff;
+}
+
+.c0::after {
+  bottom: 0;
+  right: 0;
+}
+
+.c0::before {
+  top: 0;
+  left: 0;
+}
+
 .c1 {
-  background: #263238;
   border-radius: 20px 20px 0 0;
   height: 40px;
   line-height: 40px;
@@ -98,20 +104,87 @@ exports[`SignIn form: component renders correctly 1`] = `
   text-align: center;
 }
 
+.c9 {
+  border-radius: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 35px;
+  padding: 15px;
+}
+
 .c5 {
-  padding: 8px 16px;
-  margin: 2px;
-  height: 24px;
-  outline: none;
-  width: 80%;
-  border-radius: 16px;
-  border-color: black;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .c6 {
-  border-radius: 0 0 20px 20px;
-  height: 35px;
-  padding: 15px;
+  font-size: 16px;
+  padding: 10px 0;
+  display: block;
+  color: #ffffff;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:focus ~ span:before,
+.c6:focus ~ span:after {
+  width: 50%;
+}
+
+.c6:focus ~ label,
+.c6:valid ~ label {
+  top: -15px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.c7 {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.c7::before,
+.c7::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #ffffff;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.c7::before {
+  left: 50%;
+}
+
+.c7::after {
+  right: 50%;
+}
+
+.c8 {
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
 }
 
 <div
@@ -139,27 +212,34 @@ exports[`SignIn form: component renders correctly 1`] = `
     <p>
       Please, enter your phone number:
     </p>
-    <input
-      autoComplete="tel"
-      className="phoneNumber c5"
-      name="phoneNumber"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="email or phone number"
-      value=""
-    />
+    <div
+      className="c5"
+    >
+      <input
+        autoComplete="tel"
+        className="phoneNumber c6"
+        name="phoneNumber"
+        onBlur={[Function]}
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+      <span
+        className="c7"
+      />
+      <label
+        className="c8"
+      >
+        Phone Number
+      </label>
+    </div>
   </form>
   <div
-    className="c6"
+    className="c9"
   >
     <button
-      className="c7"
-      onClick={[MockFunction]}
-    >
-      CLOSE
-    </button>
-    <button
-      className="c8"
+      className="c10"
       disabled={true}
       onClick={[Function]}
       type="submit"
@@ -171,23 +251,7 @@ exports[`SignIn form: component renders correctly 1`] = `
 `;
 
 exports[`SignIn form: component renders correctly 2`] = `
-.c7 {
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  outline: none;
-  padding: 10px;
-  position: relative;
-  background-color: #fff;
-  color: red;
-  float: left;
-}
-
-.c7:disabled {
-  opacity: 0.4;
-}
-
-.c8 {
+.c10 {
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -203,11 +267,11 @@ exports[`SignIn form: component renders correctly 2`] = `
   float: right;
 }
 
-.c8:disabled {
+.c10:disabled {
   opacity: 0.4;
 }
 
-.c8:hover {
+.c10:hover {
   background-position: right center;
 }
 
@@ -232,11 +296,10 @@ exports[`SignIn form: component renders correctly 2`] = `
 }
 
 .c0 {
-  background: white;
-  border: 1px solid #d0cccc;
-  border-radius: 20px;
+  background: rgba(0,0,0,0.8);
   position: fixed;
   z-index: 2;
+  color: white;
   top: 20%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
   margin: 100px auto 0;
@@ -247,8 +310,31 @@ exports[`SignIn form: component renders correctly 2`] = `
   box-shadow: 0 0 0 1000px rgba(0,0,0,0.8);
 }
 
+.c0::after,
+.c0::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 2px;
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: #fff;
+}
+
+.c0::after {
+  bottom: 0;
+  right: 0;
+}
+
+.c0::before {
+  top: 0;
+  left: 0;
+}
+
 .c1 {
-  background: #263238;
   border-radius: 20px 20px 0 0;
   height: 40px;
   line-height: 40px;
@@ -268,20 +354,87 @@ exports[`SignIn form: component renders correctly 2`] = `
   text-align: center;
 }
 
+.c9 {
+  border-radius: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 35px;
+  padding: 15px;
+}
+
 .c5 {
-  padding: 8px 16px;
-  margin: 2px;
-  height: 24px;
-  outline: none;
-  width: 80%;
-  border-radius: 16px;
-  border-color: black;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .c6 {
-  border-radius: 0 0 20px 20px;
-  height: 35px;
-  padding: 15px;
+  font-size: 16px;
+  padding: 10px 0;
+  display: block;
+  color: #ffffff;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:focus ~ span:before,
+.c6:focus ~ span:after {
+  width: 50%;
+}
+
+.c6:focus ~ label,
+.c6:valid ~ label {
+  top: -15px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.c7 {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.c7::before,
+.c7::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #ffffff;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.c7::before {
+  left: 50%;
+}
+
+.c7::after {
+  right: 50%;
+}
+
+.c8 {
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
 }
 
 <div
@@ -309,27 +462,34 @@ exports[`SignIn form: component renders correctly 2`] = `
     <p>
       Please, enter your phone number:
     </p>
-    <input
-      autoComplete="tel"
-      className="phoneNumber c5"
-      name="phoneNumber"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="email or phone number"
-      value=""
-    />
+    <div
+      className="c5"
+    >
+      <input
+        autoComplete="tel"
+        className="phoneNumber c6"
+        name="phoneNumber"
+        onBlur={[Function]}
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+      <span
+        className="c7"
+      />
+      <label
+        className="c8"
+      >
+        Phone Number
+      </label>
+    </div>
   </form>
   <div
-    className="c6"
+    className="c9"
   >
     <button
-      className="c7"
-      onClick={[MockFunction]}
-    >
-      CLOSE
-    </button>
-    <button
-      className="c8"
+      className="c10"
       disabled={true}
       onClick={[Function]}
       type="submit"
